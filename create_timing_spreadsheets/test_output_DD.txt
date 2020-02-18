@@ -1,0 +1,2992 @@
+Charmrun> scalable start enabled. 
+Charmrun> IBVERBS version of charmrun
+Charmrun> started all node programs in 0.952 seconds.
+Charm++> Running in non-SMP mode: 24 processes (PEs)
+Converse/Charm++ Commit ID: v6.9.0-0-gc3d50efa1
+Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try running with '+isomalloc_sync'.
+Charm++> scheduler running in netpoll mode.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 hosts (2 sockets x 12 cores x 1 PUs = 24-way SMP)
+Charm++> cpu topology info is gathered in 0.065 seconds.
+0 00000.00 Parameters  Adapt:list = [ "slope" ]
+0 00000.00 Parameters  Adapt:max_initial_level = 0
+0 00000.00 Parameters  Adapt:max_level = 3
+0 00000.00 Parameters  Adapt:min_level = -2
+0 00000.00 Parameters  Adapt:slope:max_coarsen = 0.000000000000000
+0 00000.00 Parameters  Adapt:slope:min_refine = 0.001000000000000000
+0 00000.00 Parameters  Adapt:slope:type = "particle_mass"
+0 00000.00 Parameters  Boundary:type = "periodic"
+0 00000.00 Parameters  Domain:lower = [ -1.600000000000000e+17 -1.600000000000000e+17 -1.600000000000000e+17 ]
+0 00000.00 Parameters  Domain:upper = [ 1.600000000000000e+17 1.600000000000000e+17 1.600000000000000e+17 ]
+0 00000.00 Parameters  Field:alignment = 8
+0 00000.00 Parameters  Field:gamma = 1.666666666666700
+0 00000.00 Parameters  Field:ghost_depth = 4
+0 00000.00 Parameters  Field:history = 1
+0 00000.00 Parameters  Field:list = [ "density" "velocity_x" "velocity_y" "velocity_z" "acceleration_x" "acceleration_y" "acceleration_z" "temperature" "total_energy" "internal_energy" "pressure" "density_gas" "density_particle" "density_total" "density_particle_accumulate" "potential" "potential_temp" "potential_copy" "X" "B" "X_copy" "B_copy" "diagonal" "R0" "DD_po_1" "DD_B" "Y1_bcg" "Y2_bcg" "P1_bcg" "Q2_bcg" "V1_bcg" "R1_bcg" ]
+0 00000.00 Parameters  Field:padding = 0
+0 00000.00 Parameters  Initial:list = [ "pm" ]
+0 00000.00 Parameters  Initial:pm:mask = ((( x  *  x ) + ( y  *  y )) + ( z  *  z )) <  1.024000000000000e+33 
+0 00000.00 Parameters  Initial:pm:mpp = 0.000000000000000
+0 00000.00 Parameters  Initial:pm:rank = 3
+0 00000.00 Parameters  Mesh:root_blocks = [ 4 4 4 ]
+0 00000.00 Parameters  Mesh:root_rank = 3
+0 00000.00 Parameters  Mesh:root_size = [ 16 16 16 ]
+0 00000.00 Parameters  Method:check_gravity:particle_type = "dark"
+0 00000.00 Parameters  Method:gravity:accumulate = true
+0 00000.00 Parameters  Method:gravity:solver = "dd"
+0 00000.00 Parameters  Method:list = [ "pm_deposit" "gravity" "pm_update" ]
+0 00000.00 Parameters  Method:pm_update:max_dt = 1.000000000000000
+0 00000.00 Parameters  Output:ax:colormap = [ 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 1.000000000000000 ]
+0 00000.00 Parameters  Output:ax:dir = "Collapse_Lmax_3_DD"
+0 00000.00 Parameters  Output:ax:field_list = [ "acceleration_x" ]
+0 00000.00 Parameters  Output:ax:image_ghost = false
+0 00000.00 Parameters  Output:ax:image_size = [ 512 512 ]
+0 00000.00 Parameters  Output:ax:name = [ "ax-%06d.png" "cycle" ]
+0 00000.00 Parameters  Output:ax:schedule:step = 5
+0 00000.00 Parameters  Output:ax:schedule:var = "cycle"
+0 00000.00 Parameters  Output:ax:type = "image"
+0 00000.00 Parameters  Output:dark:colormap = [ 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 1.000000000000000 ]
+0 00000.00 Parameters  Output:dark:dir = "Collapse_Lmax_3_DD"
+0 00000.00 Parameters  Output:dark:image_ghost = false
+0 00000.00 Parameters  Output:dark:image_size = [ 512 512 ]
+0 00000.00 Parameters  Output:dark:name = [ "dark-%06d.png" "cycle" ]
+0 00000.00 Parameters  Output:dark:particle_list = [ "dark" ]
+0 00000.00 Parameters  Output:dark:schedule:step = 1
+0 00000.00 Parameters  Output:dark:schedule:var = "cycle"
+0 00000.00 Parameters  Output:dark:type = "image"
+0 00000.00 Parameters  Output:data:dir = "Collapse_Lmax_3_DD"
+0 00000.00 Parameters  Output:data:field_list = [ "acceleration_x" "acceleration_y" "potential_copy" ]
+0 00000.00 Parameters  Output:data:name = [ "data-%02d-%02d.h5" "count" "proc" ]
+0 00000.00 Parameters  Output:data:schedule:step = 5.000000000000000
+0 00000.00 Parameters  Output:data:schedule:var = "time"
+0 00000.00 Parameters  Output:data:type = "data"
+0 00000.00 Parameters  Output:list = [ "dark" "po" "ax" "mesh" "data" ]
+0 00000.00 Parameters  Output:mesh:colormap = [ 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000000000000000 ]
+0 00000.00 Parameters  Output:mesh:dir = "Collapse_Lmax_3_DD"
+0 00000.00 Parameters  Output:mesh:image_max = 6.000000000000000
+0 00000.00 Parameters  Output:mesh:image_size = [ 512 512 ]
+0 00000.00 Parameters  Output:mesh:image_type = "mesh"
+0 00000.00 Parameters  Output:mesh:name = [ "mesh-%06d.png" "cycle" ]
+0 00000.00 Parameters  Output:mesh:schedule:step = 5
+0 00000.00 Parameters  Output:mesh:schedule:var = "cycle"
+0 00000.00 Parameters  Output:mesh:type = "image"
+0 00000.00 Parameters  Output:pmass:colormap = [ 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 1.000000000000000 ]
+0 00000.00 Parameters  Output:pmass:dir = "Collapse_Lmax_3_DD"
+0 00000.00 Parameters  Output:pmass:field_list = [ "particle_mass" ]
+0 00000.00 Parameters  Output:pmass:image_ghost = false
+0 00000.00 Parameters  Output:pmass:image_size = [ 512 512 ]
+0 00000.00 Parameters  Output:pmass:name = [ "pmass-%06d.png" "cycle" ]
+0 00000.00 Parameters  Output:pmass:schedule:step = 5
+0 00000.00 Parameters  Output:pmass:schedule:var = "cycle"
+0 00000.00 Parameters  Output:pmass:type = "image"
+0 00000.00 Parameters  Output:po:colormap = [ 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000 1.000000000000000 1.000000000000000 1.000000000000000 ]
+0 00000.00 Parameters  Output:po:dir = "Collapse_Lmax_3_DD"
+0 00000.00 Parameters  Output:po:field_list = [ "potential_copy" ]
+0 00000.00 Parameters  Output:po:image_ghost = false
+0 00000.00 Parameters  Output:po:image_size = [ 512 512 ]
+0 00000.00 Parameters  Output:po:name = [ "po-%06d.png" "cycle" ]
+0 00000.00 Parameters  Output:po:schedule:step = 5
+0 00000.00 Parameters  Output:po:schedule:var = "cycle"
+0 00000.00 Parameters  Output:po:type = "image"
+0 00000.00 Parameters  Particle:dark:attributes = [ "x" "default" "y" "default" "z" "default" "vx" "default" "vy" "default" "vz" "default" "ax" "default" "ay" "default" "az" "default" ]
+0 00000.00 Parameters  Particle:dark:constants = [ "mass" "default" 10.00000000000000 ]
+0 00000.00 Parameters  Particle:dark:groups = [ "has_mass" ]
+0 00000.00 Parameters  Particle:dark:position = [ "x" "y" "z" ]
+0 00000.00 Parameters  Particle:dark:velocity = [ "vx" "vy" "vz" ]
+0 00000.00 Parameters  Particle:list = [ "dark" ]
+0 00000.00 Parameters  Solver:dd:coarse_level = 0
+0 00000.00 Parameters  Solver:dd:coarse_solve = "dd_root"
+0 00000.00 Parameters  Solver:dd:domain_solve = "dd_domain"
+0 00000.00 Parameters  Solver:dd:last_smooth = "dd_smooth"
+0 00000.00 Parameters  Solver:dd:max_level = 3
+0 00000.00 Parameters  Solver:dd:min_level = -2
+0 00000.00 Parameters  Solver:dd:monitor_iter = 1
+0 00000.00 Parameters  Solver:dd:type = "dd"
+0 00000.00 Parameters  Solver:dd_domain:coarse_level = -1
+0 00000.00 Parameters  Solver:dd_domain:iter_max = 100
+0 00000.00 Parameters  Solver:dd_domain:max_level = 4
+0 00000.00 Parameters  Solver:dd_domain:min_level = -2
+0 00000.00 Parameters  Solver:dd_domain:monitor_iter = 0
+0 00000.00 Parameters  Solver:dd_domain:res_tol = 0.01000000000000000
+0 00000.00 Parameters  Solver:dd_domain:solve_type = "tree"
+0 00000.00 Parameters  Solver:dd_domain:type = "bicgstab"
+0 00000.00 Parameters  Solver:dd_root:coarse_level = -2
+0 00000.00 Parameters  Solver:dd_root:coarse_solve = "root_coarse"
+0 00000.00 Parameters  Solver:dd_root:iter_max = 2
+0 00000.00 Parameters  Solver:dd_root:max_level = 0
+0 00000.00 Parameters  Solver:dd_root:min_level = -2
+0 00000.00 Parameters  Solver:dd_root:monitor_iter = 1
+0 00000.00 Parameters  Solver:dd_root:post_smooth = "root_post"
+0 00000.00 Parameters  Solver:dd_root:pre_smooth = "root_pre"
+0 00000.00 Parameters  Solver:dd_root:res_tol = 0.05000000000000000
+0 00000.00 Parameters  Solver:dd_root:solve_type = "level"
+0 00000.00 Parameters  Solver:dd_root:type = "mg0"
+0 00000.00 Parameters  Solver:dd_smooth:iter_max = 1
+0 00000.00 Parameters  Solver:dd_smooth:monitor_iter = 1
+0 00000.00 Parameters  Solver:dd_smooth:solve_type = "leaf"
+0 00000.00 Parameters  Solver:dd_smooth:type = "jacobi"
+0 00000.00 Parameters  Solver:list = [ "dd" "dd_root" "dd_domain" "dd_smooth" "root_coarse" "root_pre" "root_post" ]
+0 00000.00 Parameters  Solver:root_coarse:iter_max = 100
+0 00000.00 Parameters  Solver:root_coarse:monitor_iter = 1
+0 00000.00 Parameters  Solver:root_coarse:res_tol = 0.01000000000000000
+0 00000.00 Parameters  Solver:root_coarse:solve_type = "block"
+0 00000.00 Parameters  Solver:root_coarse:type = "cg"
+0 00000.00 Parameters  Solver:root_post:iter_max = 2
+0 00000.00 Parameters  Solver:root_post:solve_type = "level"
+0 00000.00 Parameters  Solver:root_post:type = "jacobi"
+0 00000.00 Parameters  Solver:root_pre:iter_max = 2
+0 00000.00 Parameters  Solver:root_pre:solve_type = "level"
+0 00000.00 Parameters  Solver:root_pre:type = "jacobi"
+0 00000.00 Parameters  Stopping:cycle = 40
+0 00000.82 WARNING parameters_Config.cpp:914
+0 00000.82 WARNING Config::read()
+0 00000.82 WARNING output_axis[0] set to z
+0 00000.82 WARNING parameters_Config.cpp:914
+0 00000.82 WARNING Config::read()
+0 00000.82 WARNING output_axis[1] set to z
+0 00000.82 WARNING parameters_Config.cpp:914
+0 00000.82 WARNING Config::read()
+0 00000.82 WARNING output_axis[2] set to z
+0 00000.82 WARNING parameters_Config.cpp:914
+0 00000.82 WARNING Config::read()
+0 00000.82 WARNING output_axis[3] set to z
+UNIT TEST BEGIN
+0 00000.82  ==============================================
+0 00000.82   
+0 00000.82    .oooooo.             oooo  oooo            
+0 00000.82   d8P'  `Y8b            `888  `888            
+0 00000.82  888           .ooooo.   888   888   .ooooo.  
+0 00000.82  888          d88' `88b  888   888  d88' `88b 
+0 00000.82  888          888ooo888  888   888  888   888 
+0 00000.82  `88b    ooo  888    .o  888   888  888   888 
+0 00000.82   `Y8bood8P'  `Y8bod8P' o888o o888o `Y8bod8P' 
+0 00000.82   
+0 00000.82  A Parallel Adaptive Mesh Refinement Framework
+0 00000.82   
+0 00000.82    Laboratory for Computational Astrophysics
+0 00000.82          San Diego Supercomputer Center
+0 00000.82       University of California, San Diego
+0 00000.82   
+0 00000.82  See 'LICENSE_CELLO' for software license information
+0 00000.82   
+0 00000.82  BEGIN CELLO: Feb 07 12:20:20
+0 00000.82 Define Simulation processors 24
+0 00000.82 Define CELLO_ARCH          comet_gnu
+0 00000.82 Define CELLO_PREC          double
+0 00000.82 Define CC                  gcc
+0 00000.82 Define CFLAGS              -O3 -Wall -g   
+0 00000.82 Define CPPDEFINES          CONFIG_PRECISION_DOUBLE SMALL_INTS {'CONFIG_NODE_SIZE': 64} {'CONFIG_NODE_SIZE_3': 192} NO_FREETYPE CONFIG_USE_PERFORMANCE CONFIG_USE_MEMORY CONFIG_NEW_CHARM CONFIG_HAVE_VERSION_CONTROL
+0 00000.82 Define CPPPATH             #/include /opt/hdf5/1.10.3/gnu/serial/include  /usr/lib64/include
+0 00000.82 Define CXX                 /home/jesmi8/charm-6.9.0/bin/charmc -language charm++  
+0 00000.82 Define CXXFLAGS            -O3 -Wall -g     -balancer CommonLBs
+0 00000.82 Define FORTRANFLAGS        -O3 -Wall -g     -fdefault-real-8 -fdefault-double-8
+0 00000.82 Define FORTRAN             gfortran
+0 00000.82 Define FORTRANLIBS         gfortran
+0 00000.82 Define FORTRANPATH         #/include
+0 00000.82 Define LIBPATH             #/lib /opt/hdf5/1.10.3/gnu/serial/lib  /usr/lib64/lib 
+0 00000.82 Define LINKFLAGS           -O3 -Wall -g  -rdynamic   -module CommonLBs
+0 00000.82 Define BUILD HOST          comet-ln2.sdsc.edu
+0 00000.82 Define BUILD DIR           /home/jesmi8/enzo-e.jobordner
+0 00000.82 Define BUILD DATE (UTC)    2020-01-29
+0 00000.82 Define BUILD TIME (UTC)    00:52:38
+0 00000.82 Define CELLO_CHARM_PATH    /home/jesmi8/charm-6.9.0
+0 00000.82 Define NEW_OUTPUT          no
+0 00000.82 Define CHARM_VERSION 60900
+0 00000.82 Define CHANGESET     a8df2669a32dc16ce91d913359b18b8451487e87
+0 00000.82 Define CHARM_BUILD         verbs-linux-x86_64
+0 00000.82 Define CHARM_NEW_CHARM     Yes
+0 00000.82 Define CONFIG_NODE_SIZE    64
+0 00000.82 Define CONFIG_SMP_MODE     no
+0 00000.82 CHARM CkNumPes()           24
+0 00000.82 CHARM CkNumNodes()         24
+0 00000.82  BEGIN ENZO-P
+0 00000.82 Memory bytes 251285 bytes_high 251339
+0 00001.13 Output writing image file ./Collapse_Lmax_3_DD/dark-000000.png
+0 00001.29 Output writing image file ./Collapse_Lmax_3_DD/po-000000.png
+0 00001.46 Output writing image file ./Collapse_Lmax_3_DD/ax-000000.png
+0 00001.63 Output writing image file ./Collapse_Lmax_3_DD/mesh-000000.png
+0 00001.81 Output writing data file ./Collapse_Lmax_3_DD/data-00-00.h5
+0 00002.30  -------------------------------------
+0 00002.30 Simulation cycle 0000
+0 00002.30 Simulation time-sim 0.000000000000e+00
+0 00002.30 Simulation dt 0.000000000000e+00
+0 00002.31 Performance counter num-msg-coarsen 0
+0 00002.31 Performance counter num-msg-refine 68
+0 00002.31 Performance counter num-msg-refresh 0
+0 00002.31 Performance counter num-data-msg 0
+0 00002.31 Performance counter num-field-face 1344
+0 00002.31 Performance counter num-particle-data 1417
+0 00002.31 Performance simulation num-particles total 8744
+0 00002.31 performance simulation num-blocks-level -2 1
+0 00002.31 performance simulation num-blocks-level -1 8
+0 00002.31 performance simulation num-blocks-level 0 64
+0 00002.31 performance simulation num-blocks-level 1 448
+0 00002.31 performance simulation num-blocks-level 2 448
+0 00002.31 performance simulation num-blocks-level 3 448
+0 00002.31 Performance simulation num-leaf-blocks 1240
+0 00002.31 Performance simulation num-total-blocks 1417
+0 00002.31 Performance simulation time-usec 35497929
+0 00002.31 Performance cycle time-usec 0
+0 00002.31 Performance cycle bytes-curr 0
+0 00002.31 Performance cycle bytes-high 0
+0 00002.31 Performance cycle bytes-highest 0
+0 00002.31 Performance cycle bytes-available 0
+0 00002.31 Performance initial time-usec -198687
+0 00002.31 Performance adapt_apply time-usec 522861
+0 00002.31 Performance adapt_apply_sync time-usec 149325
+0 00002.31 Performance adapt_update time-usec 175426
+0 00002.31 Performance adapt_update_sync time-usec 2641426
+0 00002.31 Performance adapt_notify time-usec 200223
+0 00002.31 Performance adapt_notify_sync time-usec 45666
+0 00002.31 Performance adapt_end time-usec 2360
+0 00002.31 Performance adapt_end_sync time-usec 37140
+0 00002.31 Performance refresh_store time-usec 0
+0 00002.31 Performance refresh_child time-usec 0
+0 00002.31 Performance refresh_exit time-usec 0
+0 00002.31 Performance refresh_store_sync time-usec 0
+0 00002.31 Performance refresh_child_sync time-usec 0
+0 00002.31 Performance refresh_exit_sync time-usec 0
+0 00002.31 Performance control time-usec 4220
+0 00002.31 Performance compute time-usec 0
+0 00002.31 Performance output time-usec 17704886
+0 00002.31 Performance stopping time-usec 0
+0 00002.31 Performance block time-usec 1007410
+0 00002.31 Performance exit time-usec 0
+0 00002.31 Performance simulation max-proc-blocks 140
+0 00002.31 Performance simulation max-proc-particles 1093
+0 00002.31 Performance simulation balance-blocks 137.120677
+0 00002.31 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00002.31 Performance simulation balance-particles 200.000000
+0 00002.31 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00002.53 Solver dd_root  iter 0000  err 0 [0 0]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:837 CG::rr_ zero
+0 00002.54 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00002.54 Solver root_coarse  iter 0002  err 0.1700062615062898 [0 1]
+0 00002.55 Solver root_coarse  iter 0003  err 0.02361963278341575 [0 1]
+0 00002.55 Solver root_coarse  iter 0004  err 8.308708967491445e-31 [0 1]
+0 00002.56 Solver dd_root  iter 0001  err 1 [0 0]
+0 00002.56 Solver root_coarse  iter 0001  err 1 [0 14.8864]
+0 00002.56 Solver root_coarse  iter 0002  err 0.1357904794830359 [0 14.8864]
+0 00002.56 Solver root_coarse  iter 0003  err 0.02333122922851684 [0 14.8864]
+0 00002.56 Solver root_coarse  iter 0004  err 7.106920827030892e-31 [0 14.8864]
+0 00002.58 Solver dd_root  iter 0002  err 0.06987306735457208 [0 0]
+0 00002.59 Solver dd_domain  iter 0000  err 0.5654688464023255 [0.565469 0.565469]
+0 00004.46 Solver dd_domain  iter 0023  err 0.009027383784982392 [0.00902738 0.565469]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 23 rr = 1.64231e-06  rho0 = 0.14196  rr/rho0 = 0.00902738
+0 00005.15 Output writing image file ./Collapse_Lmax_3_DD/dark-000001.png
+0 00005.30  -------------------------------------
+0 00005.30 Simulation cycle 0001
+0 00005.30 Simulation time-sim 1.000000000000e+00
+0 00005.30 Simulation dt 1.000000000000e+00
+0 00005.30 Performance counter num-msg-coarsen 0
+0 00005.30 Performance counter num-msg-refine 68
+0 00005.30 Performance counter num-msg-refresh 0
+0 00005.30 Performance counter num-data-msg 0
+0 00005.30 Performance counter num-field-face 1344
+0 00005.30 Performance counter num-particle-data 1417
+0 00005.30 Performance simulation num-particles total 8744
+0 00005.30 performance simulation num-blocks-level -2 1
+0 00005.30 performance simulation num-blocks-level -1 8
+0 00005.30 performance simulation num-blocks-level 0 64
+0 00005.30 performance simulation num-blocks-level 1 448
+0 00005.31 performance simulation num-blocks-level 2 448
+0 00005.31 performance simulation num-blocks-level 3 448
+0 00005.31 Performance simulation num-leaf-blocks 1240
+0 00005.31 Performance simulation num-total-blocks 1417
+0 00005.31 Performance simulation time-usec 107547654
+0 00005.31 Performance cycle time-usec 71888845
+0 00005.31 Performance cycle bytes-curr 1290261710
+0 00005.31 Performance cycle bytes-high 1540353817
+0 00005.31 Performance cycle bytes-highest 1540353817
+0 00005.31 Performance cycle bytes-available 0
+0 00005.31 Performance initial time-usec -198687
+0 00005.31 Performance adapt_apply time-usec 1052002
+0 00005.31 Performance adapt_apply_sync time-usec 189468
+0 00005.31 Performance adapt_update time-usec 258829
+0 00005.31 Performance adapt_update_sync time-usec 4039597
+0 00005.31 Performance adapt_notify time-usec 352400
+0 00005.31 Performance adapt_notify_sync time-usec 93232
+0 00005.31 Performance adapt_end time-usec 3104
+0 00005.31 Performance adapt_end_sync time-usec 50387
+0 00005.31 Performance refresh_store time-usec 0
+0 00005.31 Performance refresh_child time-usec 0
+0 00005.31 Performance refresh_exit time-usec 0
+0 00005.31 Performance refresh_store_sync time-usec 0
+0 00005.31 Performance refresh_child_sync time-usec 0
+0 00005.31 Performance refresh_exit_sync time-usec 0
+0 00005.31 Performance control time-usec 159124
+0 00005.31 Performance compute time-usec 2367440
+0 00005.31 Performance output time-usec 19123048
+0 00005.31 Performance stopping time-usec 692580
+0 00005.31 Performance block time-usec 1007410
+0 00005.31 Performance exit time-usec 0
+0 00005.31 Performance simulation max-proc-blocks 140
+0 00005.31 Performance simulation max-proc-particles 1093
+0 00005.31 Performance simulation balance-blocks 137.120677
+0 00005.31 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00005.31 Performance simulation balance-particles 200.000000
+0 00005.31 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00005.61 Solver dd_root  iter 0000  err 0 [0 0]
+0 00005.62 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00005.62 Solver root_coarse  iter 0002  err 0.1700013750473748 [0 1]
+0 00005.62 Solver root_coarse  iter 0003  err 0.02362018552263603 [0 1]
+0 00005.62 Solver root_coarse  iter 0004  err 1.034465168194894e-28 [0 1]
+0 00005.63 Solver dd_root  iter 0001  err 1 [0 0]
+0 00005.64 Solver root_coarse  iter 0001  err 1 [0 14.8842]
+0 00005.64 Solver root_coarse  iter 0002  err 0.135783307184718 [0 14.8842]
+0 00005.64 Solver root_coarse  iter 0003  err 0.02333033836964484 [0 14.8842]
+0 00005.64 Solver root_coarse  iter 0004  err 5.117002045807463e-29 [0 14.8842]
+0 00005.65 Solver dd_root  iter 0002  err 0.05741178975825265 [0 0]
+0 00005.67 Solver dd_domain  iter 0000  err 0.5635440201659931 [0.563544 0.563544]
+0 00007.51 Solver dd_domain  iter 0023  err 0.008977158135299756 [0.00897716 0.563544]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 23 rr = 1.6242e-06  rho0 = 0.141965  rr/rho0 = 0.00897716
+0 00008.38 Output writing image file ./Collapse_Lmax_3_DD/dark-000002.png
+0 00008.57  -------------------------------------
+0 00008.57 Simulation cycle 0002
+0 00008.57 Simulation time-sim 2.000000000000e+00
+0 00008.57 Simulation dt 1.000000000000e+00
+0 00008.57 Performance counter num-msg-coarsen 0
+0 00008.57 Performance counter num-msg-refine 68
+0 00008.57 Performance counter num-msg-refresh 0
+0 00008.57 Performance counter num-data-msg 0
+0 00008.57 Performance counter num-field-face 1344
+0 00008.57 Performance counter num-particle-data 1417
+0 00008.57 Performance simulation num-particles total 8744
+0 00008.57 performance simulation num-blocks-level -2 1
+0 00008.57 performance simulation num-blocks-level -1 8
+0 00008.57 performance simulation num-blocks-level 0 64
+0 00008.57 performance simulation num-blocks-level 1 448
+0 00008.57 performance simulation num-blocks-level 2 448
+0 00008.57 performance simulation num-blocks-level 3 448
+0 00008.57 Performance simulation num-leaf-blocks 1240
+0 00008.57 Performance simulation num-total-blocks 1417
+0 00008.57 Performance simulation time-usec 185946204
+0 00008.57 Performance cycle time-usec 150287390
+0 00008.57 Performance cycle bytes-curr 1290442222
+0 00008.57 Performance cycle bytes-high 1540767855
+0 00008.57 Performance cycle bytes-highest 1540767855
+0 00008.57 Performance cycle bytes-available 0
+0 00008.57 Performance initial time-usec -198687
+0 00008.57 Performance adapt_apply time-usec 1445434
+0 00008.57 Performance adapt_apply_sync time-usec 242274
+0 00008.57 Performance adapt_update time-usec 342641
+0 00008.57 Performance adapt_update_sync time-usec 4951460
+0 00008.57 Performance adapt_notify time-usec 481101
+0 00008.57 Performance adapt_notify_sync time-usec 138983
+0 00008.57 Performance adapt_end time-usec 3819
+0 00008.57 Performance adapt_end_sync time-usec 70717
+0 00008.57 Performance refresh_store time-usec 0
+0 00008.57 Performance refresh_child time-usec 0
+0 00008.57 Performance refresh_exit time-usec 0
+0 00008.57 Performance refresh_store_sync time-usec 0
+0 00008.57 Performance refresh_child_sync time-usec 0
+0 00008.57 Performance refresh_exit_sync time-usec 0
+0 00008.57 Performance control time-usec 316260
+0 00008.57 Performance compute time-usec 4779422
+0 00008.57 Performance output time-usec 20496635
+0 00008.57 Performance stopping time-usec 1329495
+0 00008.57 Performance block time-usec 1007410
+0 00008.57 Performance exit time-usec 0
+0 00008.57 Performance simulation max-proc-blocks 140
+0 00008.57 Performance simulation max-proc-particles 1093
+0 00008.57 Performance simulation balance-blocks 137.120677
+0 00008.57 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00008.57 Performance simulation balance-particles 200.000000
+0 00008.57 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00008.81 Solver dd_root  iter 0000  err 0 [0 0]
+0 00008.82 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00008.82 Solver root_coarse  iter 0002  err 0.1699915828772939 [0 1]
+0 00008.82 Solver root_coarse  iter 0003  err 0.02362128977500523 [0 1]
+0 00008.82 Solver root_coarse  iter 0004  err 6.077359310224345e-28 [0 1]
+0 00008.83 Solver dd_root  iter 0001  err 1 [0 0]
+0 00008.84 Solver root_coarse  iter 0001  err 1 [0 14.8797]
+0 00008.84 Solver root_coarse  iter 0002  err 0.1357689445981771 [0 14.8797]
+0 00008.84 Solver root_coarse  iter 0003  err 0.0233285526449299 [0 14.8797]
+0 00008.84 Solver root_coarse  iter 0004  err 3.04016758329255e-28 [0 14.8797]
+0 00008.86 Solver dd_root  iter 0002  err 0.08575384995167608 [0 0]
+0 00008.87 Solver dd_domain  iter 0000  err 0.5598788470779827 [0.559879 0.559879]
+0 00010.91 Solver dd_domain  iter 0022  err 0.009904040741905261 [0.00990404 0.559879]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 22 rr = 1.97794e-06  rho0 = 0.142002  rr/rho0 = 0.00990404
+0 00011.43 Output writing image file ./Collapse_Lmax_3_DD/dark-000003.png
+0 00011.61  -------------------------------------
+0 00011.61 Simulation cycle 0003
+0 00011.61 Simulation time-sim 3.000000000000e+00
+0 00011.61 Simulation dt 1.000000000000e+00
+0 00011.61 Performance counter num-msg-coarsen 0
+0 00011.61 Performance counter num-msg-refine 68
+0 00011.61 Performance counter num-msg-refresh 0
+0 00011.61 Performance counter num-data-msg 0
+0 00011.61 Performance counter num-field-face 1344
+0 00011.61 Performance counter num-particle-data 1417
+0 00011.61 Performance simulation num-particles total 8744
+0 00011.61 performance simulation num-blocks-level -2 1
+0 00011.61 performance simulation num-blocks-level -1 8
+0 00011.61 performance simulation num-blocks-level 0 64
+0 00011.61 performance simulation num-blocks-level 1 448
+0 00011.61 performance simulation num-blocks-level 2 448
+0 00011.61 performance simulation num-blocks-level 3 448
+0 00011.61 Performance simulation num-leaf-blocks 1240
+0 00011.61 Performance simulation num-total-blocks 1417
+0 00011.61 Performance simulation time-usec 258897228
+0 00011.61 Performance cycle time-usec 223238397
+0 00011.61 Performance cycle bytes-curr 1290551646
+0 00011.61 Performance cycle bytes-high 1540841749
+0 00011.61 Performance cycle bytes-highest 1540851129
+0 00011.61 Performance cycle bytes-available 0
+0 00011.61 Performance initial time-usec -198687
+0 00011.61 Performance adapt_apply time-usec 2050289
+0 00011.61 Performance adapt_apply_sync time-usec 296054
+0 00011.61 Performance adapt_update time-usec 426243
+0 00011.61 Performance adapt_update_sync time-usec 6525374
+0 00011.61 Performance adapt_notify time-usec 615536
+0 00011.61 Performance adapt_notify_sync time-usec 158801
+0 00011.61 Performance adapt_end time-usec 4575
+0 00011.61 Performance adapt_end_sync time-usec 89338
+0 00011.61 Performance refresh_store time-usec 0
+0 00011.61 Performance refresh_child time-usec 0
+0 00011.61 Performance refresh_exit time-usec 0
+0 00011.61 Performance refresh_store_sync time-usec 0
+0 00011.61 Performance refresh_child_sync time-usec 0
+0 00011.61 Performance refresh_exit_sync time-usec 0
+0 00011.61 Performance control time-usec 466249
+0 00011.61 Performance compute time-usec 7073945
+0 00011.61 Performance output time-usec 22276503
+0 00011.61 Performance stopping time-usec 2025036
+0 00011.61 Performance block time-usec 1007410
+0 00011.61 Performance exit time-usec 0
+0 00011.61 Performance simulation max-proc-blocks 140
+0 00011.61 Performance simulation max-proc-particles 1093
+0 00011.61 Performance simulation balance-blocks 137.120677
+0 00011.61 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00011.61 Performance simulation balance-particles 200.000000
+0 00011.61 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00011.87 Solver dd_root  iter 0000  err 0 [0 0]
+0 00011.88 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00011.88 Solver root_coarse  iter 0002  err 0.1699768435872561 [0 1]
+0 00011.88 Solver root_coarse  iter 0003  err 0.02362294337919693 [0 1]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00011.88 Solver root_coarse  iter 0004  err 1.56153274238586e-27 [0 1]
+0 00011.90 Solver dd_root  iter 0001  err 1 [0 0]
+0 00011.91 Solver root_coarse  iter 0001  err 1 [0 14.873]
+0 00011.91 Solver root_coarse  iter 0002  err 0.1357473515984125 [0 14.873]
+0 00011.91 Solver root_coarse  iter 0003  err 0.02332586351028148 [0 14.873]
+0 00011.91 Solver root_coarse  iter 0004  err 7.941023672474592e-28 [0 14.873]
+0 00011.92 Solver dd_root  iter 0002  err 0.06275692775624647 [0 0]
+0 00011.93 Solver dd_domain  iter 0000  err 0.5548306178693229 [0.554831 0.554831]
+0 00014.13 Solver dd_domain  iter 0022  err 0.009618448991248703 [0.00961845 0.554831]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 22 rr = 1.86873e-06  rho0 = 0.142124  rr/rho0 = 0.00961845
+0 00014.70 Output writing image file ./Collapse_Lmax_3_DD/dark-000004.png
+0 00014.91  -------------------------------------
+0 00014.91 Simulation cycle 0004
+0 00014.91 Simulation time-sim 4.000000000000e+00
+0 00014.91 Simulation dt 1.000000000000e+00
+0 00014.91 Performance counter num-msg-coarsen 0
+0 00014.91 Performance counter num-msg-refine 68
+0 00014.91 Performance counter num-msg-refresh 0
+0 00014.91 Performance counter num-data-msg 0
+0 00014.91 Performance counter num-field-face 1344
+0 00014.91 Performance counter num-particle-data 1417
+0 00014.91 Performance simulation num-particles total 8744
+0 00014.91 performance simulation num-blocks-level -2 1
+0 00014.91 performance simulation num-blocks-level -1 8
+0 00014.91 performance simulation num-blocks-level 0 64
+0 00014.91 performance simulation num-blocks-level 1 448
+0 00014.91 performance simulation num-blocks-level 2 448
+0 00014.91 performance simulation num-blocks-level 3 448
+0 00014.91 Performance simulation num-leaf-blocks 1240
+0 00014.91 Performance simulation num-total-blocks 1417
+0 00014.91 Performance simulation time-usec 338158884
+0 00014.91 Performance cycle time-usec 302500041
+0 00014.91 Performance cycle bytes-curr 1290608414
+0 00014.91 Performance cycle bytes-high 1540979129
+0 00014.91 Performance cycle bytes-highest 1540979129
+0 00014.91 Performance cycle bytes-available 0
+0 00014.91 Performance initial time-usec -198687
+0 00014.91 Performance adapt_apply time-usec 2468864
+0 00014.91 Performance adapt_apply_sync time-usec 332774
+0 00014.91 Performance adapt_update time-usec 510181
+0 00014.91 Performance adapt_update_sync time-usec 7496591
+0 00014.91 Performance adapt_notify time-usec 760945
+0 00014.91 Performance adapt_notify_sync time-usec 201939
+0 00014.91 Performance adapt_end time-usec 5297
+0 00014.91 Performance adapt_end_sync time-usec 102694
+0 00014.91 Performance refresh_store time-usec 0
+0 00014.92 Performance refresh_child time-usec 0
+0 00014.92 Performance refresh_exit time-usec 0
+0 00014.92 Performance refresh_store_sync time-usec 0
+0 00014.92 Performance refresh_child_sync time-usec 0
+0 00014.92 Performance refresh_exit_sync time-usec 0
+0 00014.92 Performance control time-usec 619866
+0 00014.92 Performance compute time-usec 9480075
+0 00014.92 Performance output time-usec 23881554
+0 00014.92 Performance stopping time-usec 2638513
+0 00014.92 Performance block time-usec 1007410
+0 00014.92 Performance exit time-usec 0
+0 00014.92 Performance simulation max-proc-blocks 140
+0 00014.92 Performance simulation max-proc-particles 1093
+0 00014.92 Performance simulation balance-blocks 137.120677
+0 00014.92 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00014.92 Performance simulation balance-particles 200.000000
+0 00014.92 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00015.14 Solver dd_root  iter 0000  err 0 [0 0]
+0 00015.16 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00015.16 Solver root_coarse  iter 0002  err 0.1699570988748769 [0 1]
+0 00015.16 Solver root_coarse  iter 0003  err 0.02362514255925927 [0 1]
+0 00015.16 Solver root_coarse  iter 0004  err 2.955691651532888e-27 [0 1]
+0 00015.17 Solver dd_root  iter 0001  err 1 [0 0]
+0 00015.18 Solver root_coarse  iter 0001  err 1 [0 14.864]
+0 00015.18 Solver root_coarse  iter 0002  err 0.1357184740365454 [0 14.864]
+0 00015.18 Solver root_coarse  iter 0003  err 0.023322258873702 [0 14.864]
+0 00015.18 Solver root_coarse  iter 0004  err 1.554007427767488e-27 [0 14.864]
+0 00015.19 Solver dd_root  iter 0002  err 0.06013177678321319 [0 0]
+0 00015.21 Solver dd_domain  iter 0000  err 0.5489079099621971 [0.548908 0.548908]
+0 00017.41 Solver dd_domain  iter 0023  err 0.008586593217458111 [0.00858659 0.548908]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 23 rr = 1.49512e-06  rho0 = 0.142402  rr/rho0 = 0.00858659
+0 00018.08 Output writing image file ./Collapse_Lmax_3_DD/dark-000005.png
+0 00018.26 Output writing image file ./Collapse_Lmax_3_DD/po-000005.png
+0 00018.47 Output writing image file ./Collapse_Lmax_3_DD/ax-000005.png
+0 00018.71 Output writing image file ./Collapse_Lmax_3_DD/mesh-000005.png
+0 00018.93 Output writing data file ./Collapse_Lmax_3_DD/data-01-00.h5
+0 00019.42  -------------------------------------
+0 00019.42 Simulation cycle 0005
+0 00019.42 Simulation time-sim 5.000000000000e+00
+0 00019.42 Simulation dt 1.000000000000e+00
+0 00019.43 Performance counter num-msg-coarsen 0
+0 00019.43 Performance counter num-msg-refine 68
+0 00019.43 Performance counter num-msg-refresh 0
+0 00019.43 Performance counter num-data-msg 0
+0 00019.43 Performance counter num-field-face 1344
+0 00019.43 Performance counter num-particle-data 1417
+0 00019.43 Performance simulation num-particles total 8744
+0 00019.43 performance simulation num-blocks-level -2 1
+0 00019.43 performance simulation num-blocks-level -1 8
+0 00019.43 performance simulation num-blocks-level 0 64
+0 00019.43 performance simulation num-blocks-level 1 448
+0 00019.43 performance simulation num-blocks-level 2 448
+0 00019.43 performance simulation num-blocks-level 3 448
+0 00019.43 Performance simulation num-leaf-blocks 1240
+0 00019.43 Performance simulation num-total-blocks 1417
+0 00019.43 Performance simulation time-usec 446443840
+0 00019.43 Performance cycle time-usec 410784989
+0 00019.43 Performance cycle bytes-curr 1290624414
+0 00019.43 Performance cycle bytes-high 1541003301
+0 00019.43 Performance cycle bytes-highest 1541013725
+0 00019.43 Performance cycle bytes-available 0
+0 00019.43 Performance initial time-usec -198687
+0 00019.43 Performance adapt_apply time-usec 2892048
+0 00019.43 Performance adapt_apply_sync time-usec 366850
+0 00019.43 Performance adapt_update time-usec 593755
+0 00019.43 Performance adapt_update_sync time-usec 8513728
+0 00019.43 Performance adapt_notify time-usec 912655
+0 00019.43 Performance adapt_notify_sync time-usec 229126
+0 00019.43 Performance adapt_end time-usec 6010
+0 00019.43 Performance adapt_end_sync time-usec 116128
+0 00019.43 Performance refresh_store time-usec 0
+0 00019.43 Performance refresh_child time-usec 0
+0 00019.43 Performance refresh_exit time-usec 0
+0 00019.43 Performance refresh_store_sync time-usec 0
+0 00019.43 Performance refresh_child_sync time-usec 0
+0 00019.43 Performance refresh_exit_sync time-usec 0
+0 00019.43 Performance control time-usec 776233
+0 00019.43 Performance compute time-usec 11795797
+0 00019.43 Performance output time-usec 40861259
+0 00019.43 Performance stopping time-usec 3230350
+0 00019.43 Performance block time-usec 1007410
+0 00019.43 Performance exit time-usec 0
+0 00019.43 Performance simulation max-proc-blocks 140
+0 00019.43 Performance simulation max-proc-particles 1093
+0 00019.43 Performance simulation balance-blocks 137.120677
+0 00019.43 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00019.43 Performance simulation balance-particles 200.000000
+0 00019.43 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00019.66 Solver dd_root  iter 0000  err 0 [0 0]
+0 00019.67 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00019.67 Solver root_coarse  iter 0002  err 0.1699322718838193 [0 1]
+0 00019.67 Solver root_coarse  iter 0003  err 0.02362788200626895 [0 1]
+0 00019.67 Solver root_coarse  iter 0004  err 6.568624395957517e-27 [0 1]
+0 00019.68 Solver dd_root  iter 0001  err 1 [0 0]
+0 00019.70 Solver root_coarse  iter 0001  err 1 [0 14.8527]
+0 00019.70 Solver root_coarse  iter 0002  err 0.1356822417068536 [0 14.8527]
+0 00019.70 Solver root_coarse  iter 0003  err 0.02331772281042334 [0 14.8527]
+0 00019.70 Solver root_coarse  iter 0004  err 3.380285001720174e-27 [0 14.8527]
+0 00019.71 Solver dd_root  iter 0002  err 0.06675613848974675 [0 0]
+0 00019.73 Solver dd_domain  iter 0000  err 0.5427301559044793 [0.54273 0.54273]
+0 00022.00 Solver dd_domain  iter 0022  err 0.009185866620035349 [0.00918587 0.54273]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 22 rr = 1.72353e-06  rho0 = 0.142919  rr/rho0 = 0.00918587
+0 00022.61 Output writing image file ./Collapse_Lmax_3_DD/dark-000006.png
+0 00022.80  -------------------------------------
+0 00022.80 Simulation cycle 0006
+0 00022.80 Simulation time-sim 6.000000000000e+00
+0 00022.80 Simulation dt 1.000000000000e+00
+0 00022.80 Performance counter num-msg-coarsen 0
+0 00022.80 Performance counter num-msg-refine 68
+0 00022.80 Performance counter num-msg-refresh 0
+0 00022.80 Performance counter num-data-msg 0
+0 00022.80 Performance counter num-field-face 1344
+0 00022.80 Performance counter num-particle-data 1417
+0 00022.80 Performance simulation num-particles total 8744
+0 00022.80 performance simulation num-blocks-level -2 1
+0 00022.80 performance simulation num-blocks-level -1 8
+0 00022.80 performance simulation num-blocks-level 0 64
+0 00022.80 performance simulation num-blocks-level 1 448
+0 00022.80 performance simulation num-blocks-level 2 448
+0 00022.80 performance simulation num-blocks-level 3 448
+0 00022.80 Performance simulation num-leaf-blocks 1240
+0 00022.80 Performance simulation num-total-blocks 1417
+0 00022.80 Performance simulation time-usec 527355486
+0 00022.80 Performance cycle time-usec 491696617
+0 00022.80 Performance cycle bytes-curr 1290650158
+0 00022.80 Performance cycle bytes-high 1541023493
+0 00022.80 Performance cycle bytes-highest 1541041573
+0 00022.80 Performance cycle bytes-available 0
+0 00022.80 Performance initial time-usec -198687
+0 00022.80 Performance adapt_apply time-usec 3695402
+0 00022.80 Performance adapt_apply_sync time-usec 440177
+0 00022.80 Performance adapt_update time-usec 678827
+0 00022.80 Performance adapt_update_sync time-usec 10958149
+0 00022.80 Performance adapt_notify time-usec 1089603
+0 00022.80 Performance adapt_notify_sync time-usec 279273
+0 00022.80 Performance adapt_end time-usec 6805
+0 00022.80 Performance adapt_end_sync time-usec 129541
+0 00022.80 Performance refresh_store time-usec 0
+0 00022.80 Performance refresh_child time-usec 0
+0 00022.80 Performance refresh_exit time-usec 0
+0 00022.80 Performance refresh_store_sync time-usec 0
+0 00022.80 Performance refresh_child_sync time-usec 0
+0 00022.80 Performance refresh_exit_sync time-usec 0
+0 00022.80 Performance control time-usec 929728
+0 00022.80 Performance compute time-usec 14081643
+0 00022.80 Performance output time-usec 42426291
+0 00022.80 Performance stopping time-usec 3802204
+0 00022.80 Performance block time-usec 1007410
+0 00022.80 Performance exit time-usec 0
+0 00022.80 Performance simulation max-proc-blocks 140
+0 00022.80 Performance simulation max-proc-particles 1093
+0 00022.80 Performance simulation balance-blocks 137.120677
+0 00022.80 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00022.80 Performance simulation balance-particles 200.000000
+0 00022.80 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00023.08 Solver dd_root  iter 0000  err 0 [0 0]
+0 00023.09 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00023.09 Solver root_coarse  iter 0002  err 0.1699022596078043 [0 1]
+0 00023.09 Solver root_coarse  iter 0003  err 0.02363115557524024 [0 1]
+0 00023.09 Solver root_coarse  iter 0004  err 1.084027591089366e-26 [0 1]
+0 00023.11 Solver dd_root  iter 0001  err 1 [0 0]
+0 00023.12 Solver root_coarse  iter 0001  err 1 [0 14.8391]
+0 00023.12 Solver root_coarse  iter 0002  err 0.1356385577092199 [0 14.8391]
+0 00023.12 Solver root_coarse  iter 0003  err 0.02331223417607557 [0 14.8391]
+0 00023.12 Solver root_coarse  iter 0004  err 5.49528420862882e-27 [0 14.8391]
+0 00023.13 Solver dd_root  iter 0002  err 0.07636793196485611 [0 0]
+0 00023.14 Solver dd_domain  iter 0000  err 0.5369706916429502 [0.536971 0.536971]
+0 00025.02 Solver dd_domain  iter 0020  err 0.009855760607726062 [0.00985576 0.536971]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 2.00752e-06  rho0 = 0.143761  rr/rho0 = 0.00985576
+0 00025.67 Output writing image file ./Collapse_Lmax_3_DD/dark-000007.png
+0 00025.88  -------------------------------------
+0 00025.88 Simulation cycle 0007
+0 00025.88 Simulation time-sim 7.000000000000e+00
+0 00025.88 Simulation dt 1.000000000000e+00
+0 00025.88 Performance counter num-msg-coarsen 0
+0 00025.88 Performance counter num-msg-refine 68
+0 00025.88 Performance counter num-msg-refresh 0
+0 00025.88 Performance counter num-data-msg 0
+0 00025.88 Performance counter num-field-face 1344
+0 00025.88 Performance counter num-particle-data 1417
+0 00025.88 Performance simulation num-particles total 8744
+0 00025.88 performance simulation num-blocks-level -2 1
+0 00025.88 performance simulation num-blocks-level -1 8
+0 00025.88 performance simulation num-blocks-level 0 64
+0 00025.88 performance simulation num-blocks-level 1 448
+0 00025.88 performance simulation num-blocks-level 2 448
+0 00025.88 performance simulation num-blocks-level 3 448
+0 00025.88 Performance simulation num-leaf-blocks 1240
+0 00025.88 Performance simulation num-total-blocks 1417
+0 00025.88 Performance simulation time-usec 601268426
+0 00025.88 Performance cycle time-usec 565609545
+0 00025.88 Performance cycle bytes-curr 1290666286
+0 00025.88 Performance cycle bytes-high 1541030745
+0 00025.88 Performance cycle bytes-highest 1541059991
+0 00025.88 Performance cycle bytes-available 0
+0 00025.88 Performance initial time-usec -198687
+0 00025.88 Performance adapt_apply time-usec 4434914
+0 00025.88 Performance adapt_apply_sync time-usec 519613
+0 00025.88 Performance adapt_update time-usec 763692
+0 00025.88 Performance adapt_update_sync time-usec 12949564
+0 00025.88 Performance adapt_notify time-usec 1237157
+0 00025.88 Performance adapt_notify_sync time-usec 309060
+0 00025.88 Performance adapt_end time-usec 7631
+0 00025.88 Performance adapt_end_sync time-usec 142860
+0 00025.88 Performance refresh_store time-usec 0
+0 00025.88 Performance refresh_child time-usec 0
+0 00025.88 Performance refresh_exit time-usec 0
+0 00025.88 Performance refresh_store_sync time-usec 0
+0 00025.88 Performance refresh_child_sync time-usec 0
+0 00025.88 Performance refresh_exit_sync time-usec 0
+0 00025.88 Performance control time-usec 1071424
+0 00025.88 Performance compute time-usec 16471798
+0 00025.88 Performance output time-usec 43961072
+0 00025.88 Performance stopping time-usec 4521673
+0 00025.88 Performance block time-usec 1007410
+0 00025.88 Performance exit time-usec 0
+0 00025.88 Performance simulation max-proc-blocks 140
+0 00025.88 Performance simulation max-proc-particles 1093
+0 00025.88 Performance simulation balance-blocks 137.120677
+0 00025.88 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00025.88 Performance simulation balance-particles 200.000000
+0 00025.88 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00026.12 Solver dd_root  iter 0000  err 0 [0 0]
+0 00026.13 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00026.13 Solver root_coarse  iter 0002  err 0.1698669415108807 [0 1]
+0 00026.13 Solver root_coarse  iter 0003  err 0.02363495512447171 [0 1]
+0 00026.13 Solver root_coarse  iter 0004  err 1.619867040836592e-26 [0 1]
+0 00026.15 Solver dd_root  iter 0001  err 1 [0 0]
+0 00026.16 Solver root_coarse  iter 0001  err 1 [0 14.8233]
+0 00026.16 Solver root_coarse  iter 0002  err 0.135587311926396 [0 14.8233]
+0 00026.16 Solver root_coarse  iter 0003  err 0.02330576823992371 [0 14.8233]
+0 00026.16 Solver root_coarse  iter 0004  err 8.301248212981257e-27 [0 14.8233]
+0 00026.18 Solver dd_root  iter 0002  err 0.07288540977201242 [0 0]
+0 00026.19 Solver dd_domain  iter 0000  err 0.532302151475343 [0.532302 0.532302]
+0 00028.28 Solver dd_domain  iter 0020  err 0.008957569993440171 [0.00895757 0.532302]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 1.68733e-06  rho0 = 0.145014  rr/rho0 = 0.00895757
+0 00028.90 Output writing image file ./Collapse_Lmax_3_DD/dark-000008.png
+0 00029.07  -------------------------------------
+0 00029.07 Simulation cycle 0008
+0 00029.07 Simulation time-sim 8.000000000000e+00
+0 00029.07 Simulation dt 1.000000000000e+00
+0 00029.07 Performance counter num-msg-coarsen 0
+0 00029.07 Performance counter num-msg-refine 68
+0 00029.07 Performance counter num-msg-refresh 0
+0 00029.07 Performance counter num-data-msg 0
+0 00029.07 Performance counter num-field-face 1344
+0 00029.07 Performance counter num-particle-data 1417
+0 00029.07 Performance simulation num-particles total 8744
+0 00029.07 performance simulation num-blocks-level -2 1
+0 00029.07 performance simulation num-blocks-level -1 8
+0 00029.07 performance simulation num-blocks-level 0 64
+0 00029.07 performance simulation num-blocks-level 1 448
+0 00029.07 performance simulation num-blocks-level 2 448
+0 00029.07 performance simulation num-blocks-level 3 448
+0 00029.07 Performance simulation num-leaf-blocks 1240
+0 00029.07 Performance simulation num-total-blocks 1417
+0 00029.07 Performance simulation time-usec 677938408
+0 00029.07 Performance cycle time-usec 642279517
+0 00029.07 Performance cycle bytes-curr 1290702758
+0 00029.07 Performance cycle bytes-high 1541073179
+0 00029.07 Performance cycle bytes-highest 1541089287
+0 00029.07 Performance cycle bytes-available 0
+0 00029.07 Performance initial time-usec -198687
+0 00029.07 Performance adapt_apply time-usec 4911811
+0 00029.07 Performance adapt_apply_sync time-usec 564469
+0 00029.07 Performance adapt_update time-usec 847508
+0 00029.07 Performance adapt_update_sync time-usec 14026417
+0 00029.07 Performance adapt_notify time-usec 1391791
+0 00029.07 Performance adapt_notify_sync time-usec 350210
+0 00029.07 Performance adapt_end time-usec 8362
+0 00029.07 Performance adapt_end_sync time-usec 155927
+0 00029.07 Performance refresh_store time-usec 0
+0 00029.07 Performance refresh_child time-usec 0
+0 00029.07 Performance refresh_exit time-usec 0
+0 00029.07 Performance refresh_store_sync time-usec 0
+0 00029.07 Performance refresh_child_sync time-usec 0
+0 00029.07 Performance refresh_exit_sync time-usec 0
+0 00029.07 Performance control time-usec 1214809
+0 00029.07 Performance compute time-usec 18835155
+0 00029.07 Performance output time-usec 45181433
+0 00029.07 Performance stopping time-usec 5217922
+0 00029.07 Performance block time-usec 1007410
+0 00029.07 Performance exit time-usec 0
+0 00029.07 Performance simulation max-proc-blocks 140
+0 00029.07 Performance simulation max-proc-particles 1093
+0 00029.07 Performance simulation balance-blocks 137.120677
+0 00029.07 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00029.07 Performance simulation balance-particles 200.000000
+0 00029.07 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00029.34 Solver dd_root  iter 0000  err 0 [0 0]
+0 00029.36 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00029.36 Solver root_coarse  iter 0002  err 0.1698261678344122 [0 1]
+0 00029.36 Solver root_coarse  iter 0003  err 0.02363927157053304 [0 1]
+0 00029.36 Solver root_coarse  iter 0004  err 2.25457910987695e-26 [0 1]
+0 00029.38 Solver dd_root  iter 0001  err 1 [0 0]
+0 00029.39 Solver root_coarse  iter 0001  err 1 [0 14.8051]
+0 00029.39 Solver root_coarse  iter 0002  err 0.1355283646160337 [0 14.8051]
+0 00029.39 Solver root_coarse  iter 0003  err 0.02329829452620181 [0 14.8051]
+0 00029.39 Solver root_coarse  iter 0004  err 1.155745366852166e-26 [0 14.8051]
+0 00029.40 Solver dd_root  iter 0002  err 0.06859165692566399 [0 0]
+0 00029.42 Solver dd_domain  iter 0000  err 0.5293482652359172 [0.529348 0.529348]
+0 00031.05 Solver dd_domain  iter 0017  err 0.009422875568303006 [0.00942288 0.529348]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 1.91255e-06  rho0 = 0.146765  rr/rho0 = 0.00942288
+0 00031.70 Output writing image file ./Collapse_Lmax_3_DD/dark-000009.png
+0 00031.90  -------------------------------------
+0 00031.90 Simulation cycle 0009
+0 00031.90 Simulation time-sim 9.000000000000e+00
+0 00031.90 Simulation dt 1.000000000000e+00
+0 00031.90 Performance counter num-msg-coarsen 0
+0 00031.90 Performance counter num-msg-refine 68
+0 00031.90 Performance counter num-msg-refresh 0
+0 00031.90 Performance counter num-data-msg 0
+0 00031.90 Performance counter num-field-face 1344
+0 00031.90 Performance counter num-particle-data 1417
+0 00031.90 Performance simulation num-particles total 8744
+0 00031.90 performance simulation num-blocks-level -2 1
+0 00031.90 performance simulation num-blocks-level -1 8
+0 00031.90 performance simulation num-blocks-level 0 64
+0 00031.90 performance simulation num-blocks-level 1 448
+0 00031.90 performance simulation num-blocks-level 2 448
+0 00031.90 performance simulation num-blocks-level 3 448
+0 00031.90 Performance simulation num-leaf-blocks 1240
+0 00031.90 Performance simulation num-total-blocks 1417
+0 00031.90 Performance simulation time-usec 745817288
+0 00031.90 Performance cycle time-usec 710158385
+0 00031.90 Performance cycle bytes-curr 1290715806
+0 00031.90 Performance cycle bytes-high 1541097117
+0 00031.90 Performance cycle bytes-highest 1541110259
+0 00031.90 Performance cycle bytes-available 0
+0 00031.90 Performance initial time-usec -198687
+0 00031.90 Performance adapt_apply time-usec 5402426
+0 00031.90 Performance adapt_apply_sync time-usec 612570
+0 00031.90 Performance adapt_update time-usec 930866
+0 00031.90 Performance adapt_update_sync time-usec 15135033
+0 00031.90 Performance adapt_notify time-usec 1564940
+0 00031.90 Performance adapt_notify_sync time-usec 377512
+0 00031.90 Performance adapt_end time-usec 9088
+0 00031.90 Performance adapt_end_sync time-usec 169590
+0 00031.90 Performance refresh_store time-usec 0
+0 00031.90 Performance refresh_child time-usec 0
+0 00031.90 Performance refresh_exit time-usec 0
+0 00031.90 Performance refresh_store_sync time-usec 0
+0 00031.90 Performance refresh_child_sync time-usec 0
+0 00031.90 Performance refresh_exit_sync time-usec 0
+0 00031.90 Performance control time-usec 1341166
+0 00031.90 Performance compute time-usec 21083094
+0 00031.90 Performance output time-usec 46474827
+0 00031.90 Performance stopping time-usec 5900308
+0 00031.90 Performance block time-usec 1007410
+0 00031.90 Performance exit time-usec 0
+0 00031.90 Performance simulation max-proc-blocks 140
+0 00031.90 Performance simulation max-proc-particles 1093
+0 00031.90 Performance simulation balance-blocks 137.120677
+0 00031.90 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00031.90 Performance simulation balance-particles 200.000000
+0 00031.90 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00032.19 Solver dd_root  iter 0000  err 0 [0 0]
+0 00032.21 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00032.21 Solver root_coarse  iter 0002  err 0.1697797695587347 [0 1]
+0 00032.21 Solver root_coarse  iter 0003  err 0.02364409351654108 [0 1]
+0 00032.21 Solver root_coarse  iter 0004  err 3.017031995783204e-26 [0 1]
+0 00032.22 Solver dd_root  iter 0001  err 1 [0 0]
+0 00032.24 Solver root_coarse  iter 0001  err 1 [0 14.7847]
+0 00032.24 Solver root_coarse  iter 0002  err 0.1354615620649395 [0 14.7847]
+0 00032.24 Solver root_coarse  iter 0003  err 0.02328977870124404 [0 14.7847]
+0 00032.24 Solver root_coarse  iter 0004  err 1.558196487006689e-26 [0 14.7847]
+0 00032.25 Solver dd_root  iter 0002  err 0.07083315185357733 [0 0]
+0 00032.26 Solver dd_domain  iter 0000  err 0.5286775203757527 [0.528678 0.528678]
+0 00034.10 Solver dd_domain  iter 0019  err 0.009054909519972018 [0.00905491 0.528678]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 19 rr = 1.82279e-06  rho0 = 0.149102  rr/rho0 = 0.00905491
+0 00034.67 Output writing image file ./Collapse_Lmax_3_DD/dark-000010.png
+0 00034.86 Output writing image file ./Collapse_Lmax_3_DD/po-000010.png
+0 00035.06 Output writing image file ./Collapse_Lmax_3_DD/ax-000010.png
+0 00035.27 Output writing image file ./Collapse_Lmax_3_DD/mesh-000010.png
+0 00035.50 Output writing data file ./Collapse_Lmax_3_DD/data-02-00.h5
+0 00036.00  -------------------------------------
+0 00036.00 Simulation cycle 0010
+0 00036.00 Simulation time-sim 1.000000000000e+01
+0 00036.00 Simulation dt 1.000000000000e+00
+0 00036.00 Performance counter num-msg-coarsen 0
+0 00036.00 Performance counter num-msg-refine 68
+0 00036.00 Performance counter num-msg-refresh 0
+0 00036.00 Performance counter num-data-msg 0
+0 00036.00 Performance counter num-field-face 1344
+0 00036.00 Performance counter num-particle-data 1417
+0 00036.00 Performance simulation num-particles total 8744
+0 00036.00 performance simulation num-blocks-level -2 1
+0 00036.00 performance simulation num-blocks-level -1 8
+0 00036.00 performance simulation num-blocks-level 0 64
+0 00036.00 performance simulation num-blocks-level 1 448
+0 00036.00 performance simulation num-blocks-level 2 448
+0 00036.00 performance simulation num-blocks-level 3 448
+0 00036.00 Performance simulation num-leaf-blocks 1240
+0 00036.00 Performance simulation num-total-blocks 1417
+0 00036.00 Performance simulation time-usec 844315443
+0 00036.00 Performance cycle time-usec 808656536
+0 00036.00 Performance cycle bytes-curr 1290733822
+0 00036.00 Performance cycle bytes-high 1541115607
+0 00036.00 Performance cycle bytes-highest 1541142629
+0 00036.00 Performance cycle bytes-available 0
+0 00036.00 Performance initial time-usec -198687
+0 00036.00 Performance adapt_apply time-usec 5843140
+0 00036.00 Performance adapt_apply_sync time-usec 647061
+0 00036.00 Performance adapt_update time-usec 1014713
+0 00036.00 Performance adapt_update_sync time-usec 16187625
+0 00036.00 Performance adapt_notify time-usec 1731527
+0 00036.00 Performance adapt_notify_sync time-usec 423285
+0 00036.00 Performance adapt_end time-usec 9805
+0 00036.00 Performance adapt_end_sync time-usec 183520
+0 00036.00 Performance refresh_store time-usec 0
+0 00036.00 Performance refresh_child time-usec 0
+0 00036.00 Performance refresh_exit time-usec 0
+0 00036.00 Performance refresh_store_sync time-usec 0
+0 00036.00 Performance refresh_child_sync time-usec 0
+0 00036.00 Performance refresh_exit_sync time-usec 0
+0 00036.00 Performance control time-usec 1479127
+0 00036.00 Performance compute time-usec 23427400
+0 00036.00 Performance output time-usec 64921061
+0 00036.00 Performance stopping time-usec 6535580
+0 00036.00 Performance block time-usec 1007410
+0 00036.00 Performance exit time-usec 0
+0 00036.01 Performance simulation max-proc-blocks 140
+0 00036.01 Performance simulation max-proc-particles 1093
+0 00036.01 Performance simulation balance-blocks 137.120677
+0 00036.01 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00036.01 Performance simulation balance-particles 200.000000
+0 00036.01 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00036.31 Solver dd_root  iter 0000  err 0 [0 0]
+0 00036.33 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00036.33 Solver root_coarse  iter 0002  err 0.1697275445856643 [0 1]
+0 00036.33 Solver root_coarse  iter 0003  err 0.02364940839093797 [0 1]
+0 00036.33 Solver root_coarse  iter 0004  err 3.837995096635665e-26 [0 1]
+0 00036.35 Solver dd_root  iter 0001  err 1 [0 0]
+0 00036.36 Solver root_coarse  iter 0001  err 1 [0 14.7618]
+0 00036.36 Solver root_coarse  iter 0002  err 0.1353867176012115 [0 14.7618]
+0 00036.36 Solver root_coarse  iter 0003  err 0.02328018003409857 [0 14.7618]
+0 00036.36 Solver root_coarse  iter 0004  err 1.990055549166003e-26 [0 14.7618]
+0 00036.38 Solver dd_root  iter 0002  err 0.06512449062673256 [0 0]
+0 00036.39 Solver dd_domain  iter 0000  err 0.5308361557879456 [0.530836 0.530836]
+0 00038.36 Solver dd_domain  iter 0020  err 0.007587656323962377 [0.00758766 0.530836]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 1.33242e-06  rho0 = 0.15213  rr/rho0 = 0.00758766
+0 00038.95 Output writing image file ./Collapse_Lmax_3_DD/dark-000011.png
+0 00039.12  -------------------------------------
+0 00039.12 Simulation cycle 0011
+0 00039.12 Simulation time-sim 1.100000000000e+01
+0 00039.12 Simulation dt 1.000000000000e+00
+0 00039.12 Performance counter num-msg-coarsen 0
+0 00039.12 Performance counter num-msg-refine 68
+0 00039.12 Performance counter num-msg-refresh 0
+0 00039.12 Performance counter num-data-msg 0
+0 00039.12 Performance counter num-field-face 1344
+0 00039.12 Performance counter num-particle-data 1417
+0 00039.12 Performance simulation num-particles total 8744
+0 00039.12 performance simulation num-blocks-level -2 1
+0 00039.12 performance simulation num-blocks-level -1 8
+0 00039.12 performance simulation num-blocks-level 0 64
+0 00039.12 performance simulation num-blocks-level 1 448
+0 00039.12 performance simulation num-blocks-level 2 448
+0 00039.12 performance simulation num-blocks-level 3 448
+0 00039.12 Performance simulation num-leaf-blocks 1240
+0 00039.12 Performance simulation num-total-blocks 1417
+0 00039.12 Performance simulation time-usec 919108246
+0 00039.12 Performance cycle time-usec 883449325
+0 00039.12 Performance cycle bytes-curr 1290745838
+0 00039.12 Performance cycle bytes-high 1541131843
+0 00039.12 Performance cycle bytes-highest 1541166147
+0 00039.12 Performance cycle bytes-available 0
+0 00039.12 Performance initial time-usec -198687
+0 00039.12 Performance adapt_apply time-usec 6312170
+0 00039.12 Performance adapt_apply_sync time-usec 679000
+0 00039.12 Performance adapt_update time-usec 1098343
+0 00039.12 Performance adapt_update_sync time-usec 17239461
+0 00039.12 Performance adapt_notify time-usec 1915819
+0 00039.12 Performance adapt_notify_sync time-usec 463134
+0 00039.12 Performance adapt_end time-usec 10497
+0 00039.12 Performance adapt_end_sync time-usec 197005
+0 00039.12 Performance refresh_store time-usec 0
+0 00039.12 Performance refresh_child time-usec 0
+0 00039.12 Performance refresh_exit time-usec 0
+0 00039.12 Performance refresh_store_sync time-usec 0
+0 00039.12 Performance refresh_child_sync time-usec 0
+0 00039.12 Performance refresh_exit_sync time-usec 0
+0 00039.12 Performance control time-usec 1619614
+0 00039.12 Performance compute time-usec 25885235
+0 00039.12 Performance output time-usec 66162127
+0 00039.12 Performance stopping time-usec 7159289
+0 00039.12 Performance block time-usec 1007410
+0 00039.12 Performance exit time-usec 0
+0 00039.12 Performance simulation max-proc-blocks 140
+0 00039.12 Performance simulation max-proc-particles 1093
+0 00039.12 Performance simulation balance-blocks 137.120677
+0 00039.12 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00039.12 Performance simulation balance-particles 200.000000
+0 00039.12 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00039.40 Solver dd_root  iter 0000  err 0 [0 0]
+0 00039.41 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00039.41 Solver root_coarse  iter 0002  err 0.169669265170564 [0 1]
+0 00039.41 Solver root_coarse  iter 0003  err 0.02365520126241302 [0 1]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00039.41 Solver root_coarse  iter 0004  err 4.782398495636214e-26 [0 1]
+0 00039.43 Solver dd_root  iter 0001  err 1 [0 0]
+0 00039.44 Solver root_coarse  iter 0001  err 1 [0 14.7366]
+0 00039.44 Solver root_coarse  iter 0002  err 0.1353036237261549 [0 14.7366]
+0 00039.44 Solver root_coarse  iter 0003  err 0.02326945279368589 [0 14.7366]
+0 00039.44 Solver root_coarse  iter 0004  err 2.462689739643859e-26 [0 14.7366]
+0 00039.45 Solver dd_root  iter 0002  err 0.08017069444582776 [0 0]
+0 00039.47 Solver dd_domain  iter 0000  err 0.5364267368618617 [0.536427 0.536427]
+0 00041.37 Solver dd_domain  iter 0020  err 0.008712849657643306 [0.00871285 0.536427]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 1.84703e-06  rho0 = 0.155983  rr/rho0 = 0.00871285
+0 00042.00 Output writing image file ./Collapse_Lmax_3_DD/dark-000012.png
+0 00042.21  -------------------------------------
+0 00042.21 Simulation cycle 0012
+0 00042.21 Simulation time-sim 1.200000000000e+01
+0 00042.21 Simulation dt 1.000000000000e+00
+0 00042.21 Performance counter num-msg-coarsen 0
+0 00042.21 Performance counter num-msg-refine 68
+0 00042.21 Performance counter num-msg-refresh 0
+0 00042.21 Performance counter num-data-msg 0
+0 00042.21 Performance counter num-field-face 1344
+0 00042.21 Performance counter num-particle-data 1417
+0 00042.21 Performance simulation num-particles total 8744
+0 00042.21 performance simulation num-blocks-level -2 1
+0 00042.21 performance simulation num-blocks-level -1 8
+0 00042.21 performance simulation num-blocks-level 0 64
+0 00042.21 performance simulation num-blocks-level 1 448
+0 00042.21 performance simulation num-blocks-level 2 448
+0 00042.21 performance simulation num-blocks-level 3 448
+0 00042.21 Performance simulation num-leaf-blocks 1240
+0 00042.21 Performance simulation num-total-blocks 1417
+0 00042.21 Performance simulation time-usec 993333771
+0 00042.21 Performance cycle time-usec 957674830
+0 00042.21 Performance cycle bytes-curr 1290760150
+0 00042.21 Performance cycle bytes-high 1541140475
+0 00042.21 Performance cycle bytes-highest 1541175971
+0 00042.21 Performance cycle bytes-available 0
+0 00042.21 Performance initial time-usec -198687
+0 00042.21 Performance adapt_apply time-usec 6837782
+0 00042.21 Performance adapt_apply_sync time-usec 721759
+0 00042.21 Performance adapt_update time-usec 1182665
+0 00042.21 Performance adapt_update_sync time-usec 18466394
+0 00042.21 Performance adapt_notify time-usec 2076351
+0 00042.21 Performance adapt_notify_sync time-usec 493645
+0 00042.21 Performance adapt_end time-usec 11191
+0 00042.21 Performance adapt_end_sync time-usec 213722
+0 00042.21 Performance refresh_store time-usec 0
+0 00042.21 Performance refresh_child time-usec 0
+0 00042.21 Performance refresh_exit time-usec 0
+0 00042.21 Performance refresh_store_sync time-usec 0
+0 00042.21 Performance refresh_child_sync time-usec 0
+0 00042.21 Performance refresh_exit_sync time-usec 0
+0 00042.21 Performance control time-usec 1759978
+0 00042.21 Performance compute time-usec 28399141
+0 00042.21 Performance output time-usec 67724516
+0 00042.21 Performance stopping time-usec 7932921
+0 00042.21 Performance block time-usec 1007410
+0 00042.21 Performance exit time-usec 0
+0 00042.21 Performance simulation max-proc-blocks 140
+0 00042.21 Performance simulation max-proc-particles 1093
+0 00042.21 Performance simulation balance-blocks 137.120677
+0 00042.21 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00042.21 Performance simulation balance-particles 200.000000
+0 00042.21 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00042.48 Solver dd_root  iter 0000  err 0 [0 0]
+0 00042.50 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00042.50 Solver root_coarse  iter 0002  err 0.1696046674527666 [0 1]
+0 00042.50 Solver root_coarse  iter 0003  err 0.023661455449397 [0 1]
+0 00042.50 Solver root_coarse  iter 0004  err 5.824626880409348e-26 [0 1]
+0 00042.52 Solver dd_root  iter 0001  err 1 [0 0]
+0 00042.53 Solver root_coarse  iter 0001  err 1 [0 14.709]
+0 00042.53 Solver root_coarse  iter 0002  err 0.1352120384942522 [0 14.709]
+0 00042.53 Solver root_coarse  iter 0003  err 0.02325754431464851 [0 14.709]
+0 00042.53 Solver root_coarse  iter 0004  err 3.007827970677368e-26 [0 14.709]
+0 00042.55 Solver dd_root  iter 0002  err 0.07026816412401755 [0 0]
+0 00042.56 Solver dd_domain  iter 0000  err 0.5433212752316946 [0.543321 0.543321]
+0 00044.41 Solver dd_domain  iter 0020  err 0.009463274041935159 [0.00946327 0.543321]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 2.3069e-06  rho0 = 0.160499  rr/rho0 = 0.00946327
+0 00045.03 Output writing image file ./Collapse_Lmax_3_DD/dark-000013.png
+0 00045.23  -------------------------------------
+0 00045.23 Simulation cycle 0013
+0 00045.23 Simulation time-sim 1.300000000000e+01
+0 00045.23 Simulation dt 1.000000000000e+00
+0 00045.23 Performance counter num-msg-coarsen 0
+0 00045.23 Performance counter num-msg-refine 68
+0 00045.23 Performance counter num-msg-refresh 0
+0 00045.23 Performance counter num-data-msg 0
+0 00045.23 Performance counter num-field-face 1344
+0 00045.23 Performance counter num-particle-data 1417
+0 00045.23 Performance simulation num-particles total 8744
+0 00045.23 performance simulation num-blocks-level -2 1
+0 00045.23 performance simulation num-blocks-level -1 8
+0 00045.23 performance simulation num-blocks-level 0 64
+0 00045.23 performance simulation num-blocks-level 1 448
+0 00045.23 performance simulation num-blocks-level 2 448
+0 00045.23 performance simulation num-blocks-level 3 448
+0 00045.23 Performance simulation num-leaf-blocks 1240
+0 00045.23 Performance simulation num-total-blocks 1417
+0 00045.23 Performance simulation time-usec 1065800468
+0 00045.23 Performance cycle time-usec 1030141522
+0 00045.23 Performance cycle bytes-curr 1290765598
+0 00045.23 Performance cycle bytes-high 1541126723
+0 00045.23 Performance cycle bytes-highest 1541179171
+0 00045.23 Performance cycle bytes-available 0
+0 00045.23 Performance initial time-usec -198687
+0 00045.23 Performance adapt_apply time-usec 7371546
+0 00045.23 Performance adapt_apply_sync time-usec 758852
+0 00045.23 Performance adapt_update time-usec 1266101
+0 00045.23 Performance adapt_update_sync time-usec 19693704
+0 00045.23 Performance adapt_notify time-usec 2239760
+0 00045.23 Performance adapt_notify_sync time-usec 530599
+0 00045.23 Performance adapt_end time-usec 11899
+0 00045.23 Performance adapt_end_sync time-usec 226856
+0 00045.23 Performance refresh_store time-usec 0
+0 00045.23 Performance refresh_child time-usec 0
+0 00045.23 Performance refresh_exit time-usec 0
+0 00045.23 Performance refresh_store_sync time-usec 0
+0 00045.23 Performance refresh_child_sync time-usec 0
+0 00045.23 Performance refresh_exit_sync time-usec 0
+0 00045.23 Performance control time-usec 1900686
+0 00045.23 Performance compute time-usec 30763504
+0 00045.23 Performance output time-usec 69245229
+0 00045.23 Performance stopping time-usec 8618130
+0 00045.23 Performance block time-usec 1007410
+0 00045.23 Performance exit time-usec 0
+0 00045.23 Performance simulation max-proc-blocks 140
+0 00045.23 Performance simulation max-proc-particles 1093
+0 00045.23 Performance simulation balance-blocks 137.120677
+0 00045.23 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00045.23 Performance simulation balance-particles 200.000000
+0 00045.23 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00045.52 Solver dd_root  iter 0000  err 0 [0 0]
+0 00045.54 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00045.54 Solver root_coarse  iter 0002  err 0.1695192183605528 [0 1]
+0 00045.54 Solver root_coarse  iter 0003  err 0.02366947048333732 [0 1]
+0 00045.54 Solver root_coarse  iter 0004  err 8.744975804016436e-26 [0 1]
+0 00045.57 Solver dd_root  iter 0001  err 1 [0 0]
+0 00045.58 Solver root_coarse  iter 0001  err 1 [0 14.673]
+0 00045.58 Solver root_coarse  iter 0002  err 0.1350916415553811 [0 14.673]
+0 00045.58 Solver root_coarse  iter 0003  err 0.02324175197746267 [0 14.673]
+0 00045.58 Solver root_coarse  iter 0004  err 5.146926248465575e-26 [0 14.673]
+0 00045.60 Solver dd_root  iter 0002  err 0.07265485716366313 [0 0]
+0 00045.61 Solver dd_domain  iter 0000  err 0.5373498045300215 [0.53735 0.53735]
+0 00047.66 Solver dd_domain  iter 0020  err 0.009060635527470945 [0.00906064 0.53735]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 2.22398e-06  rho0 = 0.164591  rr/rho0 = 0.00906064
+0 00048.20 Output writing image file ./Collapse_Lmax_3_DD/dark-000014.png
+0 00048.42  -------------------------------------
+0 00048.42 Simulation cycle 0014
+0 00048.42 Simulation time-sim 1.400000000000e+01
+0 00048.42 Simulation dt 1.000000000000e+00
+0 00048.43 Performance counter num-msg-coarsen 0
+0 00048.43 Performance counter num-msg-refine 68
+0 00048.43 Performance counter num-msg-refresh 0
+0 00048.43 Performance counter num-data-msg 0
+0 00048.43 Performance counter num-field-face 1344
+0 00048.43 Performance counter num-particle-data 1417
+0 00048.43 Performance simulation num-particles total 8744
+0 00048.43 performance simulation num-blocks-level -2 1
+0 00048.43 performance simulation num-blocks-level -1 8
+0 00048.43 performance simulation num-blocks-level 0 64
+0 00048.43 performance simulation num-blocks-level 1 448
+0 00048.43 performance simulation num-blocks-level 2 448
+0 00048.43 performance simulation num-blocks-level 3 448
+0 00048.43 Performance simulation num-leaf-blocks 1240
+0 00048.43 Performance simulation num-total-blocks 1417
+0 00048.43 Performance simulation time-usec 1142428243
+0 00048.43 Performance cycle time-usec 1106769279
+0 00048.43 Performance cycle bytes-curr 1290789470
+0 00048.43 Performance cycle bytes-high 1541157269
+0 00048.43 Performance cycle bytes-highest 1541186839
+0 00048.43 Performance cycle bytes-available 0
+0 00048.43 Performance initial time-usec -198687
+0 00048.43 Performance adapt_apply time-usec 7839586
+0 00048.43 Performance adapt_apply_sync time-usec 792837
+0 00048.43 Performance adapt_update time-usec 1349619
+0 00048.43 Performance adapt_update_sync time-usec 20776077
+0 00048.43 Performance adapt_notify time-usec 2403275
+0 00048.43 Performance adapt_notify_sync time-usec 560581
+0 00048.43 Performance adapt_end time-usec 12635
+0 00048.43 Performance adapt_end_sync time-usec 240621
+0 00048.43 Performance refresh_store time-usec 0
+0 00048.43 Performance refresh_child time-usec 0
+0 00048.43 Performance refresh_exit time-usec 0
+0 00048.43 Performance refresh_store_sync time-usec 0
+0 00048.43 Performance refresh_child_sync time-usec 0
+0 00048.43 Performance refresh_exit_sync time-usec 0
+0 00048.43 Performance control time-usec 2042532
+0 00048.43 Performance compute time-usec 33199609
+0 00048.43 Performance output time-usec 70829324
+0 00048.43 Performance stopping time-usec 9291883
+0 00048.43 Performance block time-usec 1007410
+0 00048.43 Performance exit time-usec 0
+0 00048.43 Performance simulation max-proc-blocks 140
+0 00048.43 Performance simulation max-proc-particles 1093
+0 00048.43 Performance simulation balance-blocks 137.120677
+0 00048.43 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00048.43 Performance simulation balance-particles 200.000000
+0 00048.43 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00048.71 Solver dd_root  iter 0000  err 0 [0 0]
+0 00048.74 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00048.74 Solver root_coarse  iter 0002  err 0.1694082451525281 [0 1]
+0 00048.74 Solver root_coarse  iter 0003  err 0.02367943976850143 [0 1]
+0 00048.74 Solver root_coarse  iter 0004  err 8.609197925884756e-26 [0 1]
+0 00048.76 Solver dd_root  iter 0001  err 1 [0 0]
+0 00048.77 Solver root_coarse  iter 0001  err 1 [0 14.627]
+0 00048.77 Solver root_coarse  iter 0002  err 0.1349367277211506 [0 14.627]
+0 00048.77 Solver root_coarse  iter 0003  err 0.02322121778169625 [0 14.627]
+0 00048.77 Solver root_coarse  iter 0004  err 4.511732732236077e-26 [0 14.627]
+0 00048.79 Solver dd_root  iter 0002  err 0.07939400553802148 [0 0]
+0 00048.80 Solver dd_domain  iter 0000  err 0.521259830148663 [0.52126 0.52126]
+0 00050.61 Solver dd_domain  iter 0019  err 0.00985649059593398 [0.00985649 0.52126]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 19 rr = 2.77617e-06  rho0 = 0.169044  rr/rho0 = 0.00985649
+0 00051.26 Output writing image file ./Collapse_Lmax_3_DD/dark-000015.png
+0 00051.47 Output writing image file ./Collapse_Lmax_3_DD/po-000015.png
+0 00051.66 Output writing image file ./Collapse_Lmax_3_DD/ax-000015.png
+0 00051.87 Output writing image file ./Collapse_Lmax_3_DD/mesh-000015.png
+0 00052.10 Output writing data file ./Collapse_Lmax_3_DD/data-03-00.h5
+0 00052.62  -------------------------------------
+0 00052.62 Simulation cycle 0015
+0 00052.62 Simulation time-sim 1.500000000000e+01
+0 00052.62 Simulation dt 1.000000000000e+00
+0 00052.63 Performance counter num-msg-coarsen 0
+0 00052.63 Performance counter num-msg-refine 68
+0 00052.63 Performance counter num-msg-refresh 0
+0 00052.63 Performance counter num-data-msg 0
+0 00052.63 Performance counter num-field-face 1344
+0 00052.63 Performance counter num-particle-data 1417
+0 00052.63 Performance simulation num-particles total 8744
+0 00052.63 performance simulation num-blocks-level -2 1
+0 00052.63 performance simulation num-blocks-level -1 8
+0 00052.63 performance simulation num-blocks-level 0 64
+0 00052.63 performance simulation num-blocks-level 1 448
+0 00052.63 performance simulation num-blocks-level 2 448
+0 00052.63 performance simulation num-blocks-level 3 448
+0 00052.63 Performance simulation num-leaf-blocks 1240
+0 00052.63 Performance simulation num-total-blocks 1417
+0 00052.63 Performance simulation time-usec 1243190625
+0 00052.63 Performance cycle time-usec 1207531663
+0 00052.63 Performance cycle bytes-curr 1290796350
+0 00052.63 Performance cycle bytes-high 1541189155
+0 00052.63 Performance cycle bytes-highest 1541209401
+0 00052.63 Performance cycle bytes-available 0
+0 00052.63 Performance initial time-usec -198687
+0 00052.63 Performance adapt_apply time-usec 8466621
+0 00052.63 Performance adapt_apply_sync time-usec 829998
+0 00052.63 Performance adapt_update time-usec 1433528
+0 00052.63 Performance adapt_update_sync time-usec 22138093
+0 00052.63 Performance adapt_notify time-usec 2612620
+0 00052.63 Performance adapt_notify_sync time-usec 601803
+0 00052.63 Performance adapt_end time-usec 13375
+0 00052.63 Performance adapt_end_sync time-usec 254749
+0 00052.63 Performance refresh_store time-usec 0
+0 00052.63 Performance refresh_child time-usec 0
+0 00052.63 Performance refresh_exit time-usec 0
+0 00052.63 Performance refresh_store_sync time-usec 0
+0 00052.63 Performance refresh_child_sync time-usec 0
+0 00052.63 Performance refresh_exit_sync time-usec 0
+0 00052.63 Performance control time-usec 2178738
+0 00052.63 Performance compute time-usec 35653899
+0 00052.63 Performance output time-usec 90522440
+0 00052.63 Performance stopping time-usec 10043195
+0 00052.63 Performance block time-usec 1007410
+0 00052.63 Performance exit time-usec 0
+0 00052.63 Performance simulation max-proc-blocks 140
+0 00052.63 Performance simulation max-proc-particles 1093
+0 00052.63 Performance simulation balance-blocks 137.120677
+0 00052.63 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00052.63 Performance simulation balance-particles 200.000000
+0 00052.63 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00052.90 Solver dd_root  iter 0000  err 0 [0 0]
+0 00052.92 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00052.92 Solver root_coarse  iter 0002  err 0.1693297718079355 [0 1]
+0 00052.92 Solver root_coarse  iter 0003  err 0.02368620245396598 [0 1]
+0 00052.92 Solver root_coarse  iter 0004  err 1.005009269488067e-25 [0 1]
+0 00052.96 Solver dd_root  iter 0001  err 1 [0 0]
+0 00052.97 Solver root_coarse  iter 0001  err 1 [0 14.595]
+0 00052.97 Solver root_coarse  iter 0002  err 0.1348280940615462 [0 14.595]
+0 00052.97 Solver root_coarse  iter 0003  err 0.02320667423440324 [0 14.595]
+0 00052.97 Solver root_coarse  iter 0004  err 5.224668355424185e-26 [0 14.595]
+0 00052.99 Solver dd_root  iter 0002  err 0.06868948485750777 [0 0]
+0 00053.00 Solver dd_domain  iter 0000  err 0.5243759453890389 [0.524376 0.524376]
+0 00054.93 Solver dd_domain  iter 0019  err 0.009073236919224011 [0.00907324 0.524376]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 19 rr = 2.50638e-06  rho0 = 0.174486  rr/rho0 = 0.00907324
+0 00055.56 Output writing image file ./Collapse_Lmax_3_DD/dark-000016.png
+0 00055.76  -------------------------------------
+0 00055.76 Simulation cycle 0016
+0 00055.76 Simulation time-sim 1.600000000000e+01
+0 00055.76 Simulation dt 1.000000000000e+00
+0 00055.76 Performance counter num-msg-coarsen 0
+0 00055.76 Performance counter num-msg-refine 68
+0 00055.76 Performance counter num-msg-refresh 0
+0 00055.76 Performance counter num-data-msg 0
+0 00055.76 Performance counter num-field-face 1344
+0 00055.76 Performance counter num-particle-data 1417
+0 00055.76 Performance simulation num-particles total 8744
+0 00055.76 performance simulation num-blocks-level -2 1
+0 00055.76 performance simulation num-blocks-level -1 8
+0 00055.76 performance simulation num-blocks-level 0 64
+0 00055.76 performance simulation num-blocks-level 1 448
+0 00055.76 performance simulation num-blocks-level 2 448
+0 00055.76 performance simulation num-blocks-level 3 448
+0 00055.76 Performance simulation num-leaf-blocks 1240
+0 00055.76 Performance simulation num-total-blocks 1417
+0 00055.76 Performance simulation time-usec 1318577757
+0 00055.76 Performance cycle time-usec 1282918773
+0 00055.76 Performance cycle bytes-curr 1290854270
+0 00055.76 Performance cycle bytes-high 1541177149
+0 00055.76 Performance cycle bytes-highest 1541215009
+0 00055.76 Performance cycle bytes-available 0
+0 00055.76 Performance initial time-usec -198687
+0 00055.76 Performance adapt_apply time-usec 9029950
+0 00055.76 Performance adapt_apply_sync time-usec 877335
+0 00055.76 Performance adapt_update time-usec 1517045
+0 00055.76 Performance adapt_update_sync time-usec 23385395
+0 00055.76 Performance adapt_notify time-usec 2803324
+0 00055.76 Performance adapt_notify_sync time-usec 634980
+0 00055.76 Performance adapt_end time-usec 14083
+0 00055.76 Performance adapt_end_sync time-usec 268237
+0 00055.76 Performance refresh_store time-usec 0
+0 00055.76 Performance refresh_child time-usec 0
+0 00055.76 Performance refresh_exit time-usec 0
+0 00055.76 Performance refresh_store_sync time-usec 0
+0 00055.76 Performance refresh_child_sync time-usec 0
+0 00055.76 Performance refresh_exit_sync time-usec 0
+0 00055.76 Performance control time-usec 2316519
+0 00055.76 Performance compute time-usec 38065388
+0 00055.76 Performance output time-usec 92118344
+0 00055.76 Performance stopping time-usec 10687912
+0 00055.76 Performance block time-usec 1007410
+0 00055.76 Performance exit time-usec 0
+0 00055.76 Performance simulation max-proc-blocks 140
+0 00055.76 Performance simulation max-proc-particles 1093
+0 00055.76 Performance simulation balance-blocks 137.120677
+0 00055.76 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00055.76 Performance simulation balance-particles 200.000000
+0 00055.76 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00056.06 Solver dd_root  iter 0000  err 0 [0 0]
+0 00056.10 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00056.10 Solver root_coarse  iter 0002  err 0.1692441087894695 [0 1]
+0 00056.10 Solver root_coarse  iter 0003  err 0.02369331019113803 [0 1]
+0 00056.10 Solver root_coarse  iter 0004  err 1.165404665729091e-25 [0 1]
+0 00056.17 Solver dd_root  iter 0001  err 1 [0 0]
+0 00056.18 Solver root_coarse  iter 0001  err 1 [0 14.5606]
+0 00056.18 Solver root_coarse  iter 0002  err 0.1347105340436701 [0 14.5606]
+0 00056.18 Solver root_coarse  iter 0003  err 0.0231908158109041 [0 14.5606]
+0 00056.18 Solver root_coarse  iter 0004  err 5.986988359096641e-26 [0 14.5606]
+0 00056.21 Solver dd_root  iter 0002  err 0.0585173936928271 [0 0]
+0 00056.22 Solver dd_domain  iter 0000  err 0.5346528711705584 [0.534653 0.534653]
+0 00058.34 Solver dd_domain  iter 0018  err 0.00999016625298752 [0.00999017 0.534653]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 18 rr = 3.29193e-06  rho0 = 0.181615  rr/rho0 = 0.00999017
+0 00059.02 Output writing image file ./Collapse_Lmax_3_DD/dark-000017.png
+0 00059.22  -------------------------------------
+0 00059.22 Simulation cycle 0017
+0 00059.22 Simulation time-sim 1.700000000000e+01
+0 00059.22 Simulation dt 1.000000000000e+00
+0 00059.22 Performance counter num-msg-coarsen 0
+0 00059.22 Performance counter num-msg-refine 68
+0 00059.22 Performance counter num-msg-refresh 0
+0 00059.22 Performance counter num-data-msg 0
+0 00059.22 Performance counter num-field-face 1344
+0 00059.22 Performance counter num-particle-data 1417
+0 00059.22 Performance simulation num-particles total 8744
+0 00059.22 performance simulation num-blocks-level -2 1
+0 00059.22 performance simulation num-blocks-level -1 8
+0 00059.22 performance simulation num-blocks-level 0 64
+0 00059.22 performance simulation num-blocks-level 1 448
+0 00059.22 performance simulation num-blocks-level 2 448
+0 00059.22 performance simulation num-blocks-level 3 448
+0 00059.22 Performance simulation num-leaf-blocks 1240
+0 00059.22 Performance simulation num-total-blocks 1417
+0 00059.22 Performance simulation time-usec 1401583134
+0 00059.22 Performance cycle time-usec 1365924142
+0 00059.22 Performance cycle bytes-curr 1290870686
+0 00059.22 Performance cycle bytes-high 1541243537
+0 00059.22 Performance cycle bytes-highest 1541277111
+0 00059.22 Performance cycle bytes-available 0
+0 00059.22 Performance initial time-usec -198687
+0 00059.22 Performance adapt_apply time-usec 9550357
+0 00059.22 Performance adapt_apply_sync time-usec 922073
+0 00059.22 Performance adapt_update time-usec 1600961
+0 00059.22 Performance adapt_update_sync time-usec 24653495
+0 00059.22 Performance adapt_notify time-usec 3015657
+0 00059.22 Performance adapt_notify_sync time-usec 685358
+0 00059.22 Performance adapt_end time-usec 14756
+0 00059.22 Performance adapt_end_sync time-usec 281690
+0 00059.22 Performance refresh_store time-usec 0
+0 00059.22 Performance refresh_child time-usec 0
+0 00059.22 Performance refresh_exit time-usec 0
+0 00059.22 Performance refresh_store_sync time-usec 0
+0 00059.22 Performance refresh_child_sync time-usec 0
+0 00059.22 Performance refresh_exit_sync time-usec 0
+0 00059.22 Performance control time-usec 2452252
+0 00059.22 Performance compute time-usec 40746512
+0 00059.22 Performance output time-usec 93759323
+0 00059.22 Performance stopping time-usec 11456019
+0 00059.22 Performance block time-usec 1007410
+0 00059.22 Performance exit time-usec 0
+0 00059.22 Performance simulation max-proc-blocks 140
+0 00059.22 Performance simulation max-proc-particles 1093
+0 00059.22 Performance simulation balance-blocks 137.120677
+0 00059.22 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00059.22 Performance simulation balance-particles 200.000000
+0 00059.22 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00059.48 Solver dd_root  iter 0000  err 0 [0 0]
+0 00059.50 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00059.50 Solver root_coarse  iter 0002  err 0.1691477820866354 [0 1]
+0 00059.50 Solver root_coarse  iter 0003  err 0.02370097286810718 [0 1]
+0 00059.50 Solver root_coarse  iter 0004  err 1.458890753872165e-25 [0 1]
+0 00059.51 Solver dd_root  iter 0001  err 1 [0 0]
+0 00059.52 Solver root_coarse  iter 0001  err 1 [0 14.5226]
+0 00059.52 Solver root_coarse  iter 0002  err 0.1345795769182916 [0 14.5226]
+0 00059.52 Solver root_coarse  iter 0003  err 0.02317300615721418 [0 14.5226]
+0 00059.52 Solver root_coarse  iter 0004  err 7.857651882039077e-26 [0 14.5226]
+0 00059.54 Solver dd_root  iter 0002  err 0.06674467472964481 [0 0]
+0 00059.55 Solver dd_domain  iter 0000  err 0.5479667667579572 [0.547967 0.547967]
+0 00061.08 Solver dd_domain  iter 0018  err 0.009661273639800308 [0.00966127 0.547967]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 18 rr = 3.37524e-06  rho0 = 0.19016  rr/rho0 = 0.00966127
+0 00061.86 Output writing image file ./Collapse_Lmax_3_DD/dark-000018.png
+0 00062.09  -------------------------------------
+0 00062.09 Simulation cycle 0018
+0 00062.09 Simulation time-sim 1.800000000000e+01
+0 00062.09 Simulation dt 1.000000000000e+00
+0 00062.09 Performance counter num-msg-coarsen 0
+0 00062.09 Performance counter num-msg-refine 68
+0 00062.09 Performance counter num-msg-refresh 0
+0 00062.09 Performance counter num-data-msg 0
+0 00062.09 Performance counter num-field-face 1344
+0 00062.09 Performance counter num-particle-data 1417
+0 00062.09 Performance simulation num-particles total 8744
+0 00062.09 performance simulation num-blocks-level -2 1
+0 00062.09 performance simulation num-blocks-level -1 8
+0 00062.09 performance simulation num-blocks-level 0 64
+0 00062.09 performance simulation num-blocks-level 1 448
+0 00062.09 performance simulation num-blocks-level 2 448
+0 00062.09 performance simulation num-blocks-level 3 448
+0 00062.09 Performance simulation num-leaf-blocks 1240
+0 00062.09 Performance simulation num-total-blocks 1417
+0 00062.09 Performance simulation time-usec 1470348733
+0 00062.09 Performance cycle time-usec 1434689732
+0 00062.09 Performance cycle bytes-curr 1290876038
+0 00062.09 Performance cycle bytes-high 1541258449
+0 00062.09 Performance cycle bytes-highest 1541294901
+0 00062.09 Performance cycle bytes-available 0
+0 00062.09 Performance initial time-usec -198687
+0 00062.09 Performance adapt_apply time-usec 10061587
+0 00062.09 Performance adapt_apply_sync time-usec 979356
+0 00062.09 Performance adapt_update time-usec 1684614
+0 00062.09 Performance adapt_update_sync time-usec 25850081
+0 00062.09 Performance adapt_notify time-usec 3178144
+0 00062.09 Performance adapt_notify_sync time-usec 717766
+0 00062.09 Performance adapt_end time-usec 15467
+0 00062.09 Performance adapt_end_sync time-usec 295068
+0 00062.09 Performance refresh_store time-usec 0
+0 00062.09 Performance refresh_child time-usec 0
+0 00062.09 Performance refresh_exit time-usec 0
+0 00062.09 Performance refresh_store_sync time-usec 0
+0 00062.09 Performance refresh_child_sync time-usec 0
+0 00062.09 Performance refresh_exit_sync time-usec 0
+0 00062.09 Performance control time-usec 2580848
+0 00062.09 Performance compute time-usec 43048006
+0 00062.09 Performance output time-usec 95397508
+0 00062.09 Performance stopping time-usec 12148658
+0 00062.09 Performance block time-usec 1007410
+0 00062.09 Performance exit time-usec 0
+0 00062.09 Performance simulation max-proc-blocks 140
+0 00062.09 Performance simulation max-proc-particles 1093
+0 00062.09 Performance simulation balance-blocks 137.120677
+0 00062.09 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00062.09 Performance simulation balance-particles 200.000000
+0 00062.09 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00062.37 Solver dd_root  iter 0000  err 0 [0 0]
+0 00062.39 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00062.39 Solver root_coarse  iter 0002  err 0.169003612355024 [0 1]
+0 00062.39 Solver root_coarse  iter 0003  err 0.02371181765148136 [0 1]
+0 00062.39 Solver root_coarse  iter 0004  err 1.638217187248902e-25 [0 1]
+0 00062.41 Solver dd_root  iter 0001  err 1 [0 0]
+0 00062.43 Solver root_coarse  iter 0001  err 1 [0 14.4668]
+0 00062.43 Solver root_coarse  iter 0002  err 0.1343859250971568 [0 14.4668]
+0 00062.43 Solver root_coarse  iter 0003  err 0.02314639826700449 [0 14.4668]
+0 00062.43 Solver root_coarse  iter 0004  err 8.59298762640202e-26 [0 14.4668]
+0 00062.44 Solver dd_root  iter 0002  err 0.05685834067459264 [0 0]
+0 00062.46 Solver dd_domain  iter 0000  err 0.5381367065824865 [0.538137 0.538137]
+0 00063.82 Solver dd_domain  iter 0015  err 0.009725364339239007 [0.00972536 0.538137]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 15 rr = 3.72516e-06  rho0 = 0.198457  rr/rho0 = 0.00972536
+0 00064.61 Output writing image file ./Collapse_Lmax_3_DD/dark-000019.png
+0 00064.82  -------------------------------------
+0 00064.82 Simulation cycle 0019
+0 00064.82 Simulation time-sim 1.900000000000e+01
+0 00064.82 Simulation dt 1.000000000000e+00
+0 00064.83 Performance counter num-msg-coarsen 0
+0 00064.83 Performance counter num-msg-refine 68
+0 00064.83 Performance counter num-msg-refresh 0
+0 00064.83 Performance counter num-data-msg 0
+0 00064.83 Performance counter num-field-face 1344
+0 00064.83 Performance counter num-particle-data 1417
+0 00064.83 Performance simulation num-particles total 8744
+0 00064.83 performance simulation num-blocks-level -2 1
+0 00064.83 performance simulation num-blocks-level -1 8
+0 00064.83 performance simulation num-blocks-level 0 64
+0 00064.83 performance simulation num-blocks-level 1 448
+0 00064.83 performance simulation num-blocks-level 2 448
+0 00064.83 performance simulation num-blocks-level 3 448
+0 00064.83 Performance simulation num-leaf-blocks 1240
+0 00064.83 Performance simulation num-total-blocks 1417
+0 00064.83 Performance simulation time-usec 1536041738
+0 00064.83 Performance cycle time-usec 1500382725
+0 00064.83 Performance cycle bytes-curr 1290887086
+0 00064.83 Performance cycle bytes-high 1541264171
+0 00064.83 Performance cycle bytes-highest 1541302757
+0 00064.83 Performance cycle bytes-available 0
+0 00064.83 Performance initial time-usec -198687
+0 00064.83 Performance adapt_apply time-usec 10606310
+0 00064.83 Performance adapt_apply_sync time-usec 1018513
+0 00064.83 Performance adapt_update time-usec 1768371
+0 00064.83 Performance adapt_update_sync time-usec 27012070
+0 00064.83 Performance adapt_notify time-usec 3363946
+0 00064.83 Performance adapt_notify_sync time-usec 751861
+0 00064.83 Performance adapt_end time-usec 16187
+0 00064.83 Performance adapt_end_sync time-usec 308785
+0 00064.83 Performance refresh_store time-usec 0
+0 00064.83 Performance refresh_child time-usec 0
+0 00064.83 Performance refresh_exit time-usec 0
+0 00064.83 Performance refresh_store_sync time-usec 0
+0 00064.83 Performance refresh_child_sync time-usec 0
+0 00064.83 Performance refresh_exit_sync time-usec 0
+0 00064.83 Performance control time-usec 2697901
+0 00064.83 Performance compute time-usec 45348022
+0 00064.83 Performance output time-usec 97080424
+0 00064.83 Performance stopping time-usec 12830136
+0 00064.83 Performance block time-usec 1007410
+0 00064.83 Performance exit time-usec 0
+0 00064.83 Performance simulation max-proc-blocks 140
+0 00064.83 Performance simulation max-proc-particles 1093
+0 00064.83 Performance simulation balance-blocks 137.120677
+0 00064.83 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00064.83 Performance simulation balance-particles 200.000000
+0 00064.83 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00065.12 Solver dd_root  iter 0000  err 0 [0 0]
+0 00065.14 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00065.14 Solver root_coarse  iter 0002  err 0.1689021890384481 [0 1]
+0 00065.14 Solver root_coarse  iter 0003  err 0.02371901888106102 [0 1]
+0 00065.14 Solver root_coarse  iter 0004  err 1.415459014107424e-25 [0 1]
+0 00065.16 Solver dd_root  iter 0001  err 1 [0 0]
+0 00065.17 Solver root_coarse  iter 0001  err 1 [0 14.4283]
+0 00065.17 Solver root_coarse  iter 0002  err 0.1342513090391146 [0 14.4283]
+0 00065.17 Solver root_coarse  iter 0003  err 0.02312771504095058 [0 14.4283]
+0 00065.17 Solver root_coarse  iter 0004  err 6.295256972871388e-26 [0 14.4283]
+0 00065.18 Solver dd_root  iter 0002  err 0.05934301373571821 [0 0]
+0 00065.20 Solver dd_domain  iter 0000  err 0.5585455086303837 [0.558546 0.558546]
+0 00067.28 Solver dd_domain  iter 0017  err 0.009084980123200701 [0.00908498 0.558546]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 3.62062e-06  rho0 = 0.209444  rr/rho0 = 0.00908498
+0 00067.84 Output writing image file ./Collapse_Lmax_3_DD/dark-000020.png
+0 00068.07 Output writing image file ./Collapse_Lmax_3_DD/po-000020.png
+0 00068.30 Output writing image file ./Collapse_Lmax_3_DD/ax-000020.png
+0 00068.49 Output writing image file ./Collapse_Lmax_3_DD/mesh-000020.png
+0 00068.74 Output writing data file ./Collapse_Lmax_3_DD/data-04-00.h5
+0 00069.29  -------------------------------------
+0 00069.29 Simulation cycle 0020
+0 00069.29 Simulation time-sim 2.000000000000e+01
+0 00069.29 Simulation dt 1.000000000000e+00
+0 00069.29 Performance counter num-msg-coarsen 0
+0 00069.29 Performance counter num-msg-refine 68
+0 00069.29 Performance counter num-msg-refresh 0
+0 00069.29 Performance counter num-data-msg 0
+0 00069.29 Performance counter num-field-face 1344
+0 00069.29 Performance counter num-particle-data 1417
+0 00069.29 Performance simulation num-particles total 8744
+0 00069.29 performance simulation num-blocks-level -2 1
+0 00069.29 performance simulation num-blocks-level -1 8
+0 00069.29 performance simulation num-blocks-level 0 64
+0 00069.29 performance simulation num-blocks-level 1 448
+0 00069.29 performance simulation num-blocks-level 2 448
+0 00069.29 performance simulation num-blocks-level 3 448
+0 00069.29 Performance simulation num-leaf-blocks 1240
+0 00069.29 Performance simulation num-total-blocks 1417
+0 00069.29 Performance simulation time-usec 1643149695
+0 00069.29 Performance cycle time-usec 1607490673
+0 00069.29 Performance cycle bytes-curr 1290896318
+0 00069.29 Performance cycle bytes-high 1541259667
+0 00069.29 Performance cycle bytes-highest 1541307177
+0 00069.29 Performance cycle bytes-available 0
+0 00069.29 Performance initial time-usec -198687
+0 00069.29 Performance adapt_apply time-usec 11363752
+0 00069.29 Performance adapt_apply_sync time-usec 1072168
+0 00069.29 Performance adapt_update time-usec 1852126
+0 00069.29 Performance adapt_update_sync time-usec 28592131
+0 00069.29 Performance adapt_notify time-usec 3552809
+0 00069.29 Performance adapt_notify_sync time-usec 785717
+0 00069.29 Performance adapt_end time-usec 16935
+0 00069.29 Performance adapt_end_sync time-usec 322846
+0 00069.29 Performance refresh_store time-usec 0
+0 00069.29 Performance refresh_child time-usec 0
+0 00069.29 Performance refresh_exit time-usec 0
+0 00069.29 Performance refresh_store_sync time-usec 0
+0 00069.29 Performance refresh_child_sync time-usec 0
+0 00069.29 Performance refresh_exit_sync time-usec 0
+0 00069.29 Performance control time-usec 2826749
+0 00069.29 Performance compute time-usec 47831619
+0 00069.29 Performance output time-usec 118250084
+0 00069.29 Performance stopping time-usec 13540609
+0 00069.29 Performance block time-usec 1007410
+0 00069.29 Performance exit time-usec 0
+0 00069.29 Performance simulation max-proc-blocks 140
+0 00069.29 Performance simulation max-proc-particles 1093
+0 00069.29 Performance simulation balance-blocks 137.120677
+0 00069.29 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00069.29 Performance simulation balance-particles 200.000000
+0 00069.29 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00069.56 Solver dd_root  iter 0000  err 0 [0 0]
+0 00069.57 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00069.57 Solver root_coarse  iter 0002  err 0.168807334461897 [0 1]
+0 00069.57 Solver root_coarse  iter 0003  err 0.02372544761474153 [0 1]
+0 00069.57 Solver root_coarse  iter 0004  err 1.552859028697804e-25 [0 1]
+0 00069.59 Solver dd_root  iter 0001  err 1 [0 0]
+0 00069.60 Solver root_coarse  iter 0001  err 1 [0 14.3929]
+0 00069.60 Solver root_coarse  iter 0002  err 0.1341265727308104 [0 14.3929]
+0 00069.60 Solver root_coarse  iter 0003  err 0.0231102692058722 [0 14.3929]
+0 00069.60 Solver root_coarse  iter 0004  err 6.831992480947094e-26 [0 14.3929]
+0 00069.61 Solver dd_root  iter 0002  err 0.06212484406797611 [0 0]
+0 00069.63 Solver dd_domain  iter 0000  err 0.5880142591542513 [0.588014 0.588014]
+0 00071.18 Solver dd_domain  iter 0017  err 0.00859336430593576 [0.00859336 0.588014]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 3.66572e-06  rho0 = 0.222801  rr/rho0 = 0.00859336
+0 00071.82 Output writing image file ./Collapse_Lmax_3_DD/dark-000021.png
+0 00072.01  -------------------------------------
+0 00072.01 Simulation cycle 0021
+0 00072.01 Simulation time-sim 2.100000000000e+01
+0 00072.01 Simulation dt 1.000000000000e+00
+0 00072.01 Performance counter num-msg-coarsen 0
+0 00072.01 Performance counter num-msg-refine 68
+0 00072.01 Performance counter num-msg-refresh 0
+0 00072.01 Performance counter num-data-msg 0
+0 00072.01 Performance counter num-field-face 1344
+0 00072.01 Performance counter num-particle-data 1417
+0 00072.01 Performance simulation num-particles total 8744
+0 00072.01 performance simulation num-blocks-level -2 1
+0 00072.01 performance simulation num-blocks-level -1 8
+0 00072.01 performance simulation num-blocks-level 0 64
+0 00072.01 performance simulation num-blocks-level 1 448
+0 00072.01 performance simulation num-blocks-level 2 448
+0 00072.01 performance simulation num-blocks-level 3 448
+0 00072.01 Performance simulation num-leaf-blocks 1240
+0 00072.01 Performance simulation num-total-blocks 1417
+0 00072.01 Performance simulation time-usec 1708519133
+0 00072.01 Performance cycle time-usec 1672860101
+0 00072.01 Performance cycle bytes-curr 1290900942
+0 00072.01 Performance cycle bytes-high 1541282937
+0 00072.01 Performance cycle bytes-highest 1541317347
+0 00072.01 Performance cycle bytes-available 0
+0 00072.01 Performance initial time-usec -198687
+0 00072.01 Performance adapt_apply time-usec 11944988
+0 00072.01 Performance adapt_apply_sync time-usec 1126075
+0 00072.01 Performance adapt_update time-usec 1936559
+0 00072.01 Performance adapt_update_sync time-usec 29846371
+0 00072.01 Performance adapt_notify time-usec 3761828
+0 00072.01 Performance adapt_notify_sync time-usec 825877
+0 00072.01 Performance adapt_end time-usec 17691
+0 00072.01 Performance adapt_end_sync time-usec 337106
+0 00072.01 Performance refresh_store time-usec 0
+0 00072.01 Performance refresh_child time-usec 0
+0 00072.01 Performance refresh_exit time-usec 0
+0 00072.01 Performance refresh_store_sync time-usec 0
+0 00072.01 Performance refresh_child_sync time-usec 0
+0 00072.01 Performance refresh_exit_sync time-usec 0
+0 00072.01 Performance control time-usec 2951424
+0 00072.01 Performance compute time-usec 50144516
+0 00072.01 Performance output time-usec 119925349
+0 00072.01 Performance stopping time-usec 14241779
+0 00072.01 Performance block time-usec 1007410
+0 00072.01 Performance exit time-usec 0
+0 00072.01 Performance simulation max-proc-blocks 140
+0 00072.01 Performance simulation max-proc-particles 1093
+0 00072.01 Performance simulation balance-blocks 137.120677
+0 00072.01 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00072.01 Performance simulation balance-particles 200.000000
+0 00072.01 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00072.30 Solver dd_root  iter 0000  err 0 [0 0]
+0 00072.32 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00072.32 Solver root_coarse  iter 0002  err 0.1686868623908227 [0 1]
+0 00072.32 Solver root_coarse  iter 0003  err 0.02373320270642295 [0 1]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00072.32 Solver root_coarse  iter 0004  err 1.351015928347608e-25 [0 1]
+0 00072.35 Solver dd_root  iter 0001  err 1 [0 0]
+0 00072.36 Solver root_coarse  iter 0001  err 1 [0 14.3486]
+0 00072.36 Solver root_coarse  iter 0002  err 0.1339697088689536 [0 14.3486]
+0 00072.36 Solver root_coarse  iter 0003  err 0.0230881508780366 [0 14.3486]
+0 00072.36 Solver root_coarse  iter 0004  err 4.805130482078871e-26 [0 14.3486]
+0 00072.38 Solver dd_root  iter 0002  err 0.05806162546779241 [0 0]
+0 00072.40 Solver dd_domain  iter 0000  err 0.6096616670357156 [0.609662 0.609662]
+0 00074.11 Solver dd_domain  iter 0017  err 0.008247115846640229 [0.00824712 0.609662]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 3.84041e-06  rho0 = 0.237622  rr/rho0 = 0.00824712
+0 00074.85 Output writing image file ./Collapse_Lmax_3_DD/dark-000022.png
+0 00075.02  -------------------------------------
+0 00075.02 Simulation cycle 0022
+0 00075.02 Simulation time-sim 2.200000000000e+01
+0 00075.02 Simulation dt 1.000000000000e+00
+0 00075.02 Performance counter num-msg-coarsen 0
+0 00075.02 Performance counter num-msg-refine 68
+0 00075.02 Performance counter num-msg-refresh 0
+0 00075.02 Performance counter num-data-msg 0
+0 00075.02 Performance counter num-field-face 1344
+0 00075.02 Performance counter num-particle-data 1417
+0 00075.02 Performance simulation num-particles total 8744
+0 00075.02 performance simulation num-blocks-level -2 1
+0 00075.02 performance simulation num-blocks-level -1 8
+0 00075.02 performance simulation num-blocks-level 0 64
+0 00075.02 performance simulation num-blocks-level 1 448
+0 00075.02 performance simulation num-blocks-level 2 448
+0 00075.02 performance simulation num-blocks-level 3 448
+0 00075.02 Performance simulation num-leaf-blocks 1240
+0 00075.02 Performance simulation num-total-blocks 1417
+0 00075.02 Performance simulation time-usec 1780778803
+0 00075.02 Performance cycle time-usec 1745119758
+0 00075.02 Performance cycle bytes-curr 1290903238
+0 00075.02 Performance cycle bytes-high 1541284437
+0 00075.02 Performance cycle bytes-highest 1541324113
+0 00075.02 Performance cycle bytes-available 0
+0 00075.02 Performance initial time-usec -198687
+0 00075.02 Performance adapt_apply time-usec 12585140
+0 00075.02 Performance adapt_apply_sync time-usec 1172457
+0 00075.02 Performance adapt_update time-usec 2020358
+0 00075.02 Performance adapt_update_sync time-usec 31181989
+0 00075.02 Performance adapt_notify time-usec 3987874
+0 00075.02 Performance adapt_notify_sync time-usec 872163
+0 00075.02 Performance adapt_end time-usec 18385
+0 00075.02 Performance adapt_end_sync time-usec 351105
+0 00075.02 Performance refresh_store time-usec 0
+0 00075.02 Performance refresh_child time-usec 0
+0 00075.02 Performance refresh_exit time-usec 0
+0 00075.02 Performance refresh_store_sync time-usec 0
+0 00075.02 Performance refresh_child_sync time-usec 0
+0 00075.02 Performance refresh_exit_sync time-usec 0
+0 00075.02 Performance control time-usec 3079017
+0 00075.02 Performance compute time-usec 52660666
+0 00075.02 Performance output time-usec 121225396
+0 00075.02 Performance stopping time-usec 15013263
+0 00075.02 Performance block time-usec 1007410
+0 00075.02 Performance exit time-usec 0
+0 00075.02 Performance simulation max-proc-blocks 140
+0 00075.02 Performance simulation max-proc-particles 1093
+0 00075.02 Performance simulation balance-blocks 137.120677
+0 00075.02 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00075.02 Performance simulation balance-particles 200.000000
+0 00075.02 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00075.33 Solver dd_root  iter 0000  err 0 [0 0]
+0 00075.35 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00075.35 Solver root_coarse  iter 0002  err 0.1686095167534124 [0 1]
+0 00075.35 Solver root_coarse  iter 0003  err 0.02373794841801098 [0 1]
+0 00075.35 Solver root_coarse  iter 0004  err 1.221138932556604e-25 [0 1]
+0 00075.37 Solver dd_root  iter 0001  err 1 [0 0]
+0 00075.38 Solver root_coarse  iter 0001  err 1 [0 14.3207]
+0 00075.38 Solver root_coarse  iter 0002  err 0.1338698894128326 [0 14.3207]
+0 00075.38 Solver root_coarse  iter 0003  err 0.02307397399852672 [0 14.3207]
+0 00075.38 Solver root_coarse  iter 0004  err 3.424235793095265e-26 [0 14.3207]
+0 00075.39 Solver dd_root  iter 0002  err 0.07578768978178332 [0 0]
+0 00075.41 Solver dd_domain  iter 0000  err 0.6558049024438004 [0.655805 0.655805]
+0 00076.93 Solver dd_domain  iter 0016  err 0.00973141693738519 [0.00973142 0.655805]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 16 rr = 6.28434e-06  rho0 = 0.257605  rr/rho0 = 0.00973142
+0 00077.50 Output writing image file ./Collapse_Lmax_3_DD/dark-000023.png
+0 00077.69  -------------------------------------
+0 00077.69 Simulation cycle 0023
+0 00077.69 Simulation time-sim 2.300000000000e+01
+0 00077.69 Simulation dt 1.000000000000e+00
+0 00077.69 Performance counter num-msg-coarsen 0
+0 00077.69 Performance counter num-msg-refine 68
+0 00077.69 Performance counter num-msg-refresh 0
+0 00077.69 Performance counter num-data-msg 0
+0 00077.69 Performance counter num-field-face 1344
+0 00077.69 Performance counter num-particle-data 1417
+0 00077.69 Performance simulation num-particles total 8744
+0 00077.69 performance simulation num-blocks-level -2 1
+0 00077.69 performance simulation num-blocks-level -1 8
+0 00077.69 performance simulation num-blocks-level 0 64
+0 00077.69 performance simulation num-blocks-level 1 448
+0 00077.69 performance simulation num-blocks-level 2 448
+0 00077.69 performance simulation num-blocks-level 3 448
+0 00077.69 Performance simulation num-leaf-blocks 1240
+0 00077.69 Performance simulation num-total-blocks 1417
+0 00077.69 Performance simulation time-usec 1844833027
+0 00077.69 Performance cycle time-usec 1809173969
+0 00077.69 Performance cycle bytes-curr 1290914454
+0 00077.69 Performance cycle bytes-high 1541280575
+0 00077.69 Performance cycle bytes-highest 1541329137
+0 00077.69 Performance cycle bytes-available 0
+0 00077.69 Performance initial time-usec -198687
+0 00077.69 Performance adapt_apply time-usec 13309697
+0 00077.69 Performance adapt_apply_sync time-usec 1234597
+0 00077.69 Performance adapt_update time-usec 2110548
+0 00077.69 Performance adapt_update_sync time-usec 32716279
+0 00077.69 Performance adapt_notify time-usec 4239330
+0 00077.69 Performance adapt_notify_sync time-usec 913750
+0 00077.69 Performance adapt_end time-usec 19178
+0 00077.69 Performance adapt_end_sync time-usec 365991
+0 00077.69 Performance refresh_store time-usec 0
+0 00077.69 Performance refresh_child time-usec 0
+0 00077.69 Performance refresh_exit time-usec 0
+0 00077.69 Performance refresh_store_sync time-usec 0
+0 00077.69 Performance refresh_child_sync time-usec 0
+0 00077.69 Performance refresh_exit_sync time-usec 0
+0 00077.69 Performance control time-usec 3197799
+0 00077.69 Performance compute time-usec 55195869
+0 00077.69 Performance output time-usec 122977963
+0 00077.69 Performance stopping time-usec 15942744
+0 00077.69 Performance block time-usec 1007410
+0 00077.69 Performance exit time-usec 0
+0 00077.69 Performance simulation max-proc-blocks 140
+0 00077.69 Performance simulation max-proc-particles 1093
+0 00077.69 Performance simulation balance-blocks 137.120677
+0 00077.69 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00077.69 Performance simulation balance-particles 200.000000
+0 00077.69 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00077.98 Solver dd_root  iter 0000  err 0 [0 0]
+0 00078.00 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00078.00 Solver root_coarse  iter 0002  err 0.1685448519612383 [0 1]
+0 00078.00 Solver root_coarse  iter 0003  err 0.02374178042738792 [0 1]
+0 00078.00 Solver root_coarse  iter 0004  err 1.456711410684729e-25 [0 1]
+0 00078.01 Solver dd_root  iter 0001  err 1 [0 0]
+0 00078.03 Solver root_coarse  iter 0001  err 1 [0 14.2975]
+0 00078.03 Solver root_coarse  iter 0002  err 0.1337869546895316 [0 14.2975]
+0 00078.03 Solver root_coarse  iter 0003  err 0.02306213579335902 [0 14.2975]
+0 00078.03 Solver root_coarse  iter 0004  err 3.421281322832411e-26 [0 14.2975]
+0 00078.04 Solver dd_root  iter 0002  err 0.06614191332640927 [0 0]
+0 00078.05 Solver dd_domain  iter 0000  err 0.705845874912132 [0.705846 0.705846]
+0 00079.63 Solver dd_domain  iter 0017  err 0.009302301775230219 [0.0093023 0.705846]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 6.91022e-06  rho0 = 0.282589  rr/rho0 = 0.0093023
+0 00080.28 Output writing image file ./Collapse_Lmax_3_DD/dark-000024.png
+0 00080.50  -------------------------------------
+0 00080.50 Simulation cycle 0024
+0 00080.50 Simulation time-sim 2.400000000000e+01
+0 00080.50 Simulation dt 1.000000000000e+00
+0 00080.50 Performance counter num-msg-coarsen 0
+0 00080.50 Performance counter num-msg-refine 68
+0 00080.50 Performance counter num-msg-refresh 0
+0 00080.50 Performance counter num-data-msg 0
+0 00080.50 Performance counter num-field-face 1344
+0 00080.50 Performance counter num-particle-data 1417
+0 00080.50 Performance simulation num-particles total 8744
+0 00080.50 performance simulation num-blocks-level -2 1
+0 00080.50 performance simulation num-blocks-level -1 8
+0 00080.50 performance simulation num-blocks-level 0 64
+0 00080.50 performance simulation num-blocks-level 1 448
+0 00080.50 performance simulation num-blocks-level 2 448
+0 00080.50 performance simulation num-blocks-level 3 448
+0 00080.50 Performance simulation num-leaf-blocks 1240
+0 00080.50 Performance simulation num-total-blocks 1417
+0 00080.50 Performance simulation time-usec 1912254079
+0 00080.50 Performance cycle time-usec 1876595011
+0 00080.50 Performance cycle bytes-curr 1290919854
+0 00080.50 Performance cycle bytes-high 1541293793
+0 00080.50 Performance cycle bytes-highest 1541337763
+0 00080.50 Performance cycle bytes-available 0
+0 00080.50 Performance initial time-usec -198687
+0 00080.50 Performance adapt_apply time-usec 13976705
+0 00080.50 Performance adapt_apply_sync time-usec 1280579
+0 00080.50 Performance adapt_update time-usec 2194226
+0 00080.50 Performance adapt_update_sync time-usec 34101663
+0 00080.50 Performance adapt_notify time-usec 4469545
+0 00080.50 Performance adapt_notify_sync time-usec 961578
+0 00080.50 Performance adapt_end time-usec 19901
+0 00080.50 Performance adapt_end_sync time-usec 379709
+0 00080.50 Performance refresh_store time-usec 0
+0 00080.50 Performance refresh_child time-usec 0
+0 00080.50 Performance refresh_exit time-usec 0
+0 00080.50 Performance refresh_store_sync time-usec 0
+0 00080.50 Performance refresh_child_sync time-usec 0
+0 00080.50 Performance refresh_exit_sync time-usec 0
+0 00080.50 Performance control time-usec 3321232
+0 00080.50 Performance compute time-usec 57556891
+0 00080.50 Performance output time-usec 124844381
+0 00080.50 Performance stopping time-usec 16717915
+0 00080.50 Performance block time-usec 1007410
+0 00080.50 Performance exit time-usec 0
+0 00080.50 Performance simulation max-proc-blocks 140
+0 00080.50 Performance simulation max-proc-particles 1093
+0 00080.50 Performance simulation balance-blocks 137.120677
+0 00080.50 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00080.50 Performance simulation balance-particles 200.000000
+0 00080.50 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00080.79 Solver dd_root  iter 0000  err 0 [0 0]
+0 00080.80 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00080.80 Solver root_coarse  iter 0002  err 0.1685129026000565 [0 1]
+0 00080.80 Solver root_coarse  iter 0003  err 0.02374362906303072 [0 1]
+0 00080.80 Solver root_coarse  iter 0004  err 1.287021415987354e-25 [0 1]
+0 00080.82 Solver dd_root  iter 0001  err 1 [0 0]
+0 00080.83 Solver root_coarse  iter 0001  err 1 [0 14.2862]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00080.83 Solver root_coarse  iter 0002  err 0.133746149901696 [0 14.2862]
+0 00080.83 Solver root_coarse  iter 0003  err 0.02305629168978749 [0 14.2862]
+0 00080.83 Solver root_coarse  iter 0004  err 2.766943945607317e-26 [0 14.2862]
+0 00080.85 Solver dd_root  iter 0002  err 0.05197760652593122 [0 0]
+0 00080.86 Solver dd_domain  iter 0000  err 0.7611579589535866 [0.761158 0.761158]
+0 00082.58 Solver dd_domain  iter 0018  err 0.009624157782047662 [0.00962416 0.761158]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 18 rr = 9.18598e-06  rho0 = 0.31492  rr/rho0 = 0.00962416
+0 00083.27 Output writing image file ./Collapse_Lmax_3_DD/dark-000025.png
+0 00083.49 Output writing image file ./Collapse_Lmax_3_DD/po-000025.png
+0 00083.74 Output writing image file ./Collapse_Lmax_3_DD/ax-000025.png
+0 00083.96 Output writing image file ./Collapse_Lmax_3_DD/mesh-000025.png
+0 00084.21 Output writing data file ./Collapse_Lmax_3_DD/data-05-00.h5
+0 00084.79  -------------------------------------
+0 00084.79 Simulation cycle 0025
+0 00084.79 Simulation time-sim 2.500000000000e+01
+0 00084.79 Simulation dt 1.000000000000e+00
+0 00084.80 Performance counter num-msg-coarsen 0
+0 00084.80 Performance counter num-msg-refine 68
+0 00084.80 Performance counter num-msg-refresh 0
+0 00084.80 Performance counter num-data-msg 0
+0 00084.80 Performance counter num-field-face 1344
+0 00084.80 Performance counter num-particle-data 1417
+0 00084.80 Performance simulation num-particles total 8744
+0 00084.80 performance simulation num-blocks-level -2 1
+0 00084.80 performance simulation num-blocks-level -1 8
+0 00084.80 performance simulation num-blocks-level 0 64
+0 00084.80 performance simulation num-blocks-level 1 448
+0 00084.80 performance simulation num-blocks-level 2 448
+0 00084.80 performance simulation num-blocks-level 3 448
+0 00084.80 Performance simulation num-leaf-blocks 1240
+0 00084.80 Performance simulation num-total-blocks 1417
+0 00084.80 Performance simulation time-usec 2015125628
+0 00084.80 Performance cycle time-usec 1979466557
+0 00084.80 Performance cycle bytes-curr 1290930726
+0 00084.80 Performance cycle bytes-high 1541304257
+0 00084.80 Performance cycle bytes-highest 1541341731
+0 00084.80 Performance cycle bytes-available 0
+0 00084.80 Performance initial time-usec -198687
+0 00084.80 Performance adapt_apply time-usec 14817828
+0 00084.80 Performance adapt_apply_sync time-usec 1370424
+0 00084.80 Performance adapt_update time-usec 2277155
+0 00084.80 Performance adapt_update_sync time-usec 36046465
+0 00084.80 Performance adapt_notify time-usec 4784862
+0 00084.80 Performance adapt_notify_sync time-usec 983777
+0 00084.80 Performance adapt_end time-usec 20589
+0 00084.80 Performance adapt_end_sync time-usec 394469
+0 00084.80 Performance refresh_store time-usec 0
+0 00084.80 Performance refresh_child time-usec 0
+0 00084.80 Performance refresh_exit time-usec 0
+0 00084.80 Performance refresh_store_sync time-usec 0
+0 00084.80 Performance refresh_child_sync time-usec 0
+0 00084.80 Performance refresh_exit_sync time-usec 0
+0 00084.80 Performance control time-usec 3451208
+0 00084.80 Performance compute time-usec 60109074
+0 00084.80 Performance output time-usec 147320724
+0 00084.80 Performance stopping time-usec 17520349
+0 00084.80 Performance block time-usec 1007410
+0 00084.80 Performance exit time-usec 0
+0 00084.80 Performance simulation max-proc-blocks 140
+0 00084.80 Performance simulation max-proc-particles 1093
+0 00084.80 Performance simulation balance-blocks 137.120677
+0 00084.80 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00084.80 Performance simulation balance-particles 200.000000
+0 00084.80 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00085.08 Solver dd_root  iter 0000  err 0 [0 0]
+0 00085.09 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00085.09 Solver root_coarse  iter 0002  err 0.1684920022588696 [0 1]
+0 00085.09 Solver root_coarse  iter 0003  err 0.02374482261825255 [0 1]
+0 00085.09 Solver root_coarse  iter 0004  err 1.382868062812925e-25 [0 1]
+0 00085.11 Solver dd_root  iter 0001  err 1 [0 0]
+0 00085.12 Solver root_coarse  iter 0001  err 1 [0 14.2788]
+0 00085.12 Solver root_coarse  iter 0002  err 0.1337195171432889 [0 14.2788]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:911 CG::rs_ zero
+0 00085.12 Solver root_coarse  iter 0003  err 0.02305247040310831 [0 14.2788]
+0 00085.12 Solver root_coarse  iter 0004  err 2.950632828363194e-26 [0 14.2788]
+0 00085.14 Solver dd_root  iter 0002  err 0.05723249546779703 [0 0]
+0 00085.15 Solver dd_domain  iter 0000  err 0.8142902646145054 [0.81429 0.81429]
+0 00087.18 Solver dd_domain  iter 0019  err 0.009871852554999033 [0.00987185 0.81429]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 19 rr = 1.24954e-05  rho0 = 0.358077  rr/rho0 = 0.00987185
+0 00087.75 Output writing image file ./Collapse_Lmax_3_DD/dark-000026.png
+0 00087.97  -------------------------------------
+0 00087.97 Simulation cycle 0026
+0 00087.97 Simulation time-sim 2.600000000000e+01
+0 00087.97 Simulation dt 1.000000000000e+00
+0 00087.97 Performance counter num-msg-coarsen 0
+0 00087.97 Performance counter num-msg-refine 68
+0 00087.97 Performance counter num-msg-refresh 0
+0 00087.97 Performance counter num-data-msg 0
+0 00087.97 Performance counter num-field-face 1344
+0 00087.97 Performance counter num-particle-data 1417
+0 00087.97 Performance simulation num-particles total 8744
+0 00087.97 performance simulation num-blocks-level -2 1
+0 00087.97 performance simulation num-blocks-level -1 8
+0 00087.97 performance simulation num-blocks-level 0 64
+0 00087.97 performance simulation num-blocks-level 1 448
+0 00087.97 performance simulation num-blocks-level 2 448
+0 00087.97 performance simulation num-blocks-level 3 448
+0 00087.97 Performance simulation num-leaf-blocks 1240
+0 00087.97 Performance simulation num-total-blocks 1417
+0 00087.97 Performance simulation time-usec 2091605398
+0 00087.97 Performance cycle time-usec 2055946308
+0 00087.97 Performance cycle bytes-curr 1290933830
+0 00087.97 Performance cycle bytes-high 1541306503
+0 00087.97 Performance cycle bytes-highest 1541345447
+0 00087.97 Performance cycle bytes-available 0
+0 00087.97 Performance initial time-usec -198687
+0 00087.97 Performance adapt_apply time-usec 15456757
+0 00087.97 Performance adapt_apply_sync time-usec 1422034
+0 00087.97 Performance adapt_update time-usec 2360792
+0 00087.98 Performance adapt_update_sync time-usec 37312294
+0 00087.98 Performance adapt_notify time-usec 4999885
+0 00087.98 Performance adapt_notify_sync time-usec 1031705
+0 00087.98 Performance adapt_end time-usec 21340
+0 00087.98 Performance adapt_end_sync time-usec 408439
+0 00087.98 Performance refresh_store time-usec 0
+0 00087.98 Performance refresh_child time-usec 0
+0 00087.98 Performance refresh_exit time-usec 0
+0 00087.98 Performance refresh_store_sync time-usec 0
+0 00087.98 Performance refresh_child_sync time-usec 0
+0 00087.98 Performance refresh_exit_sync time-usec 0
+0 00087.98 Performance control time-usec 3588787
+0 00087.98 Performance compute time-usec 62582932
+0 00087.98 Performance output time-usec 149220947
+0 00087.98 Performance stopping time-usec 18194165
+0 00087.98 Performance block time-usec 1007410
+0 00087.98 Performance exit time-usec 0
+0 00087.98 Performance simulation max-proc-blocks 140
+0 00087.98 Performance simulation max-proc-particles 1093
+0 00087.98 Performance simulation balance-blocks 137.120677
+0 00087.98 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00087.98 Performance simulation balance-particles 200.000000
+0 00087.98 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00088.27 Solver dd_root  iter 0000  err 0 [0 0]
+0 00088.30 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00088.30 Solver root_coarse  iter 0002  err 0.1684862455207958 [0 1]
+0 00088.30 Solver root_coarse  iter 0003  err 0.02374514919219683 [0 1]
+0 00088.30 Solver root_coarse  iter 0004  err 1.576005640076807e-25 [0 1]
+0 00088.31 Solver dd_root  iter 0001  err 1 [0 0]
+0 00088.33 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00088.33 Solver root_coarse  iter 0002  err 0.1337121898421217 [0 14.2767]
+0 00088.33 Solver root_coarse  iter 0003  err 0.02305141812199667 [0 14.2767]
+0 00088.33 Solver root_coarse  iter 0004  err 3.506975009311745e-26 [0 14.2767]
+0 00088.34 Solver dd_root  iter 0002  err 0.05431226294129543 [0 0]
+0 00088.36 Solver dd_domain  iter 0000  err 0.8669081280742631 [0.866908 0.866908]
+0 00090.33 Solver dd_domain  iter 0020  err 0.009226961440041447 [0.00922696 0.866908]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 1.52146e-05  rho0 = 0.422738  rr/rho0 = 0.00922696
+0 00090.97 Output writing image file ./Collapse_Lmax_3_DD/dark-000027.png
+0 00091.21  -------------------------------------
+0 00091.21 Simulation cycle 0027
+0 00091.21 Simulation time-sim 2.700000000000e+01
+0 00091.21 Simulation dt 1.000000000000e+00
+0 00091.21 Performance counter num-msg-coarsen 0
+0 00091.21 Performance counter num-msg-refine 68
+0 00091.21 Performance counter num-msg-refresh 0
+0 00091.21 Performance counter num-data-msg 0
+0 00091.21 Performance counter num-field-face 1344
+0 00091.21 Performance counter num-particle-data 1417
+0 00091.21 Performance simulation num-particles total 8744
+0 00091.21 performance simulation num-blocks-level -2 1
+0 00091.21 performance simulation num-blocks-level -1 8
+0 00091.21 performance simulation num-blocks-level 0 64
+0 00091.21 performance simulation num-blocks-level 1 448
+0 00091.21 performance simulation num-blocks-level 2 448
+0 00091.21 performance simulation num-blocks-level 3 448
+0 00091.21 Performance simulation num-leaf-blocks 1240
+0 00091.21 Performance simulation num-total-blocks 1417
+0 00091.21 Performance simulation time-usec 2169298119
+0 00091.21 Performance cycle time-usec 2133639015
+0 00091.21 Performance cycle bytes-curr 1290943510
+0 00091.21 Performance cycle bytes-high 1541319305
+0 00091.21 Performance cycle bytes-highest 1541352227
+0 00091.21 Performance cycle bytes-available 0
+0 00091.21 Performance initial time-usec -198687
+0 00091.21 Performance adapt_apply time-usec 16077644
+0 00091.21 Performance adapt_apply_sync time-usec 1489434
+0 00091.21 Performance adapt_update time-usec 2444281
+0 00091.21 Performance adapt_update_sync time-usec 38743260
+0 00091.21 Performance adapt_notify time-usec 5248106
+0 00091.21 Performance adapt_notify_sync time-usec 1078210
+0 00091.21 Performance adapt_end time-usec 22062
+0 00091.21 Performance adapt_end_sync time-usec 422600
+0 00091.21 Performance refresh_store time-usec 0
+0 00091.21 Performance refresh_child time-usec 0
+0 00091.21 Performance refresh_exit time-usec 0
+0 00091.21 Performance refresh_store_sync time-usec 0
+0 00091.21 Performance refresh_child_sync time-usec 0
+0 00091.21 Performance refresh_exit_sync time-usec 0
+0 00091.21 Performance control time-usec 3729717
+0 00091.21 Performance compute time-usec 65144285
+0 00091.21 Performance output time-usec 151180146
+0 00091.21 Performance stopping time-usec 19011591
+0 00091.21 Performance block time-usec 1007410
+0 00091.21 Performance exit time-usec 0
+0 00091.21 Performance simulation max-proc-blocks 140
+0 00091.21 Performance simulation max-proc-particles 1093
+0 00091.21 Performance simulation balance-blocks 137.120677
+0 00091.21 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00091.21 Performance simulation balance-particles 200.000000
+0 00091.21 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00091.51 Solver dd_root  iter 0000  err 0 [0 0]
+0 00091.53 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00091.53 Solver root_coarse  iter 0002  err 0.1684862455207958 [0 1]
+0 00091.54 Solver root_coarse  iter 0003  err 0.02374514919219682 [0 1]
+0 00091.54 Solver root_coarse  iter 0004  err 1.637911438662154e-25 [0 1]
+0 00091.55 Solver dd_root  iter 0001  err 1 [0 0]
+0 00091.57 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00091.57 Solver root_coarse  iter 0002  err 0.1337121898421218 [0 14.2767]
+0 00091.57 Solver root_coarse  iter 0003  err 0.02305141812199668 [0 14.2767]
+0 00091.57 Solver root_coarse  iter 0004  err 3.613262249732811e-26 [0 14.2767]
+0 00091.58 Solver dd_root  iter 0002  err 0.0490004446712311 [0 0]
+0 00091.60 Solver dd_domain  iter 0000  err 0.9124555325271192 [0.912456 0.912456]
+0 00093.79 Solver dd_domain  iter 0020  err 0.009332710397593636 [0.00933271 0.912456]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 20 rr = 2.3664e-05  rho0 = 0.521239  rr/rho0 = 0.00933271
+0 00094.49 Output writing image file ./Collapse_Lmax_3_DD/dark-000028.png
+0 00094.72  -------------------------------------
+0 00094.72 Simulation cycle 0028
+0 00094.72 Simulation time-sim 2.800000000000e+01
+0 00094.72 Simulation dt 1.000000000000e+00
+0 00094.72 Performance counter num-msg-coarsen 0
+0 00094.72 Performance counter num-msg-refine 68
+0 00094.72 Performance counter num-msg-refresh 0
+0 00094.72 Performance counter num-data-msg 0
+0 00094.72 Performance counter num-field-face 1344
+0 00094.72 Performance counter num-particle-data 1417
+0 00094.72 Performance simulation num-particles total 8744
+0 00094.72 performance simulation num-blocks-level -2 1
+0 00094.72 performance simulation num-blocks-level -1 8
+0 00094.72 performance simulation num-blocks-level 0 64
+0 00094.72 performance simulation num-blocks-level 1 448
+0 00094.72 performance simulation num-blocks-level 2 448
+0 00094.72 performance simulation num-blocks-level 3 448
+0 00094.72 Performance simulation num-leaf-blocks 1240
+0 00094.72 Performance simulation num-total-blocks 1417
+0 00094.72 Performance simulation time-usec 2253590948
+0 00094.72 Performance cycle time-usec 2217931838
+0 00094.72 Performance cycle bytes-curr 1290948310
+0 00094.72 Performance cycle bytes-high 1541346639
+0 00094.72 Performance cycle bytes-highest 1541361873
+0 00094.72 Performance cycle bytes-available 0
+0 00094.72 Performance initial time-usec -198687
+0 00094.72 Performance adapt_apply time-usec 16765844
+0 00094.72 Performance adapt_apply_sync time-usec 1541874
+0 00094.72 Performance adapt_update time-usec 2527902
+0 00094.72 Performance adapt_update_sync time-usec 40099114
+0 00094.72 Performance adapt_notify time-usec 5468638
+0 00094.72 Performance adapt_notify_sync time-usec 1127261
+0 00094.72 Performance adapt_end time-usec 22743
+0 00094.72 Performance adapt_end_sync time-usec 437123
+0 00094.72 Performance refresh_store time-usec 0
+0 00094.72 Performance refresh_child time-usec 0
+0 00094.72 Performance refresh_exit time-usec 0
+0 00094.72 Performance refresh_store_sync time-usec 0
+0 00094.72 Performance refresh_child_sync time-usec 0
+0 00094.72 Performance refresh_exit_sync time-usec 0
+0 00094.72 Performance control time-usec 3873803
+0 00094.72 Performance compute time-usec 67758251
+0 00094.72 Performance output time-usec 153140302
+0 00094.72 Performance stopping time-usec 19745805
+0 00094.72 Performance block time-usec 1007410
+0 00094.72 Performance exit time-usec 0
+0 00094.72 Performance simulation max-proc-blocks 140
+0 00094.73 Performance simulation max-proc-particles 1093
+0 00094.73 Performance simulation balance-blocks 137.120677
+0 00094.73 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00094.73 Performance simulation balance-particles 200.000000
+0 00094.73 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00095.05 Solver dd_root  iter 0000  err 0 [0 0]
+0 00095.06 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00095.06 Solver root_coarse  iter 0002  err 0.1684862455207955 [0 1]
+0 00095.06 Solver root_coarse  iter 0003  err 0.02374514919219678 [0 1]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00095.06 Solver root_coarse  iter 0004  err 2.090534134492462e-25 [0 1]
+0 00095.09 Solver dd_root  iter 0001  err 1 [0 0]
+0 00095.10 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:911 CG::rs_ zero
+0 00095.10 Solver root_coarse  iter 0002  err 0.1337121898421221 [0 14.2767]
+0 00095.10 Solver root_coarse  iter 0003  err 0.02305141812199672 [0 14.2767]
+0 00095.10 Solver root_coarse  iter 0004  err 4.671515067518472e-26 [0 14.2767]
+0 00095.12 Solver dd_root  iter 0002  err 0.04845634929612891 [0 0]
+0 00095.13 Solver dd_domain  iter 0000  err 0.9477073454297472 [0.947707 0.947707]
+0 00097.20 Solver dd_domain  iter 0019  err 0.009753833234185437 [0.00975383 0.947707]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 19 rr = 4.35002e-05  rho0 = 0.676192  rr/rho0 = 0.00975383
+0 00097.82 Output writing image file ./Collapse_Lmax_3_DD/dark-000029.png
+0 00098.02  -------------------------------------
+0 00098.02 Simulation cycle 0029
+0 00098.02 Simulation time-sim 2.900000000000e+01
+0 00098.02 Simulation dt 1.000000000000e+00
+0 00098.02 Performance counter num-msg-coarsen 0
+0 00098.02 Performance counter num-msg-refine 68
+0 00098.02 Performance counter num-msg-refresh 0
+0 00098.02 Performance counter num-data-msg 0
+0 00098.02 Performance counter num-field-face 1344
+0 00098.02 Performance counter num-particle-data 1417
+0 00098.02 Performance simulation num-particles total 8744
+0 00098.02 performance simulation num-blocks-level -2 1
+0 00098.02 performance simulation num-blocks-level -1 8
+0 00098.02 performance simulation num-blocks-level 0 64
+0 00098.02 performance simulation num-blocks-level 1 448
+0 00098.02 performance simulation num-blocks-level 2 448
+0 00098.02 performance simulation num-blocks-level 3 448
+0 00098.02 Performance simulation num-leaf-blocks 1240
+0 00098.02 Performance simulation num-total-blocks 1417
+0 00098.02 Performance simulation time-usec 2332767770
+0 00098.02 Performance cycle time-usec 2297108648
+0 00098.02 Performance cycle bytes-curr 1290952766
+0 00098.02 Performance cycle bytes-high 1541353037
+0 00098.02 Performance cycle bytes-highest 1541375027
+0 00098.02 Performance cycle bytes-available 0
+0 00098.02 Performance initial time-usec -198687
+0 00098.02 Performance adapt_apply time-usec 17418577
+0 00098.02 Performance adapt_apply_sync time-usec 1583811
+0 00098.02 Performance adapt_update time-usec 2611661
+0 00098.02 Performance adapt_update_sync time-usec 41473270
+0 00098.02 Performance adapt_notify time-usec 5695302
+0 00098.02 Performance adapt_notify_sync time-usec 1178424
+0 00098.02 Performance adapt_end time-usec 23447
+0 00098.02 Performance adapt_end_sync time-usec 451852
+0 00098.02 Performance refresh_store time-usec 0
+0 00098.02 Performance refresh_child time-usec 0
+0 00098.02 Performance refresh_exit time-usec 0
+0 00098.02 Performance refresh_store_sync time-usec 0
+0 00098.02 Performance refresh_child_sync time-usec 0
+0 00098.02 Performance refresh_exit_sync time-usec 0
+0 00098.02 Performance control time-usec 4011600
+0 00098.02 Performance compute time-usec 70435674
+0 00098.02 Performance output time-usec 154784429
+0 00098.02 Performance stopping time-usec 20584463
+0 00098.02 Performance block time-usec 1007410
+0 00098.02 Performance exit time-usec 0
+0 00098.02 Performance simulation max-proc-blocks 140
+0 00098.02 Performance simulation max-proc-particles 1093
+0 00098.02 Performance simulation balance-blocks 137.120677
+0 00098.02 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00098.02 Performance simulation balance-particles 200.000000
+0 00098.02 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00098.29 Solver dd_root  iter 0000  err 0 [0 0]
+0 00098.31 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00098.31 Solver root_coarse  iter 0002  err 0.1684862455207957 [0 1]
+0 00098.31 Solver root_coarse  iter 0003  err 0.02374514919219681 [0 1]
+0 00098.31 Solver root_coarse  iter 0004  err 2.378382489506066e-25 [0 1]
+0 00098.35 Solver dd_root  iter 0001  err 1 [0 0]
+0 00098.36 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00098.36 Solver root_coarse  iter 0002  err 0.133712189842122 [0 14.2767]
+0 00098.36 Solver root_coarse  iter 0003  err 0.0230514181219967 [0 14.2767]
+0 00098.36 Solver root_coarse  iter 0004  err 5.302418197680776e-26 [0 14.2767]
+0 00098.38 Solver dd_root  iter 0002  err 0.06823122960201354 [0 0]
+0 00098.39 Solver dd_domain  iter 0000  err 0.9696458632489894 [0.969646 0.969646]
+0 00100.23 Solver dd_domain  iter 0017  err 0.009808194964600543 [0.00980819 0.969646]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 7.66271e-05  rho0 = 0.892487  rr/rho0 = 0.00980819
+0 00100.89 Output writing image file ./Collapse_Lmax_3_DD/dark-000030.png
+0 00101.14 Output writing image file ./Collapse_Lmax_3_DD/po-000030.png
+0 00101.40 Output writing image file ./Collapse_Lmax_3_DD/ax-000030.png
+0 00101.64 Output writing image file ./Collapse_Lmax_3_DD/mesh-000030.png
+0 00101.90 Output writing data file ./Collapse_Lmax_3_DD/data-06-00.h5
+0 00102.45  -------------------------------------
+0 00102.45 Simulation cycle 0030
+0 00102.45 Simulation time-sim 3.000000000000e+01
+0 00102.45 Simulation dt 1.000000000000e+00
+0 00102.45 Performance counter num-msg-coarsen 0
+0 00102.45 Performance counter num-msg-refine 68
+0 00102.45 Performance counter num-msg-refresh 0
+0 00102.45 Performance counter num-data-msg 0
+0 00102.45 Performance counter num-field-face 1344
+0 00102.45 Performance counter num-particle-data 1417
+0 00102.45 Performance simulation num-particles total 8744
+0 00102.45 performance simulation num-blocks-level -2 1
+0 00102.45 performance simulation num-blocks-level -1 8
+0 00102.45 performance simulation num-blocks-level 0 64
+0 00102.45 performance simulation num-blocks-level 1 448
+0 00102.45 performance simulation num-blocks-level 2 448
+0 00102.45 performance simulation num-blocks-level 3 448
+0 00102.45 Performance simulation num-leaf-blocks 1240
+0 00102.45 Performance simulation num-total-blocks 1417
+0 00102.45 Performance simulation time-usec 2439014713
+0 00102.45 Performance cycle time-usec 2403355595
+0 00102.45 Performance cycle bytes-curr 1290954094
+0 00102.45 Performance cycle bytes-high 1541350947
+0 00102.45 Performance cycle bytes-highest 1541383179
+0 00102.45 Performance cycle bytes-available 0
+0 00102.45 Performance initial time-usec -198687
+0 00102.45 Performance adapt_apply time-usec 18125018
+0 00102.45 Performance adapt_apply_sync time-usec 1668179
+0 00102.45 Performance adapt_update time-usec 2694947
+0 00102.45 Performance adapt_update_sync time-usec 43065339
+0 00102.45 Performance adapt_notify time-usec 5900269
+0 00102.45 Performance adapt_notify_sync time-usec 1206000
+0 00102.45 Performance adapt_end time-usec 24177
+0 00102.45 Performance adapt_end_sync time-usec 466147
+0 00102.45 Performance refresh_store time-usec 0
+0 00102.45 Performance refresh_child time-usec 0
+0 00102.45 Performance refresh_exit time-usec 0
+0 00102.45 Performance refresh_store_sync time-usec 0
+0 00102.45 Performance refresh_child_sync time-usec 0
+0 00102.45 Performance refresh_exit_sync time-usec 0
+0 00102.45 Performance control time-usec 4137799
+0 00102.45 Performance compute time-usec 72916074
+0 00102.45 Performance output time-usec 178619003
+0 00102.45 Performance stopping time-usec 21349581
+0 00102.45 Performance block time-usec 1007410
+0 00102.45 Performance exit time-usec 0
+0 00102.45 Performance simulation max-proc-blocks 140
+0 00102.45 Performance simulation max-proc-particles 1093
+0 00102.45 Performance simulation balance-blocks 137.120677
+0 00102.45 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00102.45 Performance simulation balance-particles 200.000000
+0 00102.45 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00102.77 Solver dd_root  iter 0000  err 0 [0 0]
+0 00102.79 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00102.79 Solver root_coarse  iter 0002  err 0.1684862455207957 [0 1]
+0 00102.79 Solver root_coarse  iter 0003  err 0.02374514919219678 [0 1]
+0 00102.79 Solver root_coarse  iter 0004  err 1.671816216919261e-25 [0 1]
+0 00102.80 Solver dd_root  iter 0001  err 1 [0 0]
+0 00102.82 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00102.82 Solver root_coarse  iter 0002  err 0.1337121898421219 [0 14.2767]
+0 00102.82 Solver root_coarse  iter 0003  err 0.0230514181219967 [0 14.2767]
+0 00102.82 Solver root_coarse  iter 0004  err 3.617624963227718e-26 [0 14.2767]
+0 00102.83 Solver dd_root  iter 0002  err 0.05473108142203185 [0 0]
+0 00102.85 Solver dd_domain  iter 0000  err 0.9801557965562095 [0.980156 0.980156]
+0 00104.53 Solver dd_domain  iter 0017  err 0.006734230609793938 [0.00673423 0.980156]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 5.60935e-05  rho0 = 1.11216  rr/rho0 = 0.00673423
+0 00105.13 Output writing image file ./Collapse_Lmax_3_DD/dark-000031.png
+0 00105.36  -------------------------------------
+0 00105.36 Simulation cycle 0031
+0 00105.36 Simulation time-sim 3.100000000000e+01
+0 00105.36 Simulation dt 1.000000000000e+00
+0 00105.36 Performance counter num-msg-coarsen 0
+0 00105.36 Performance counter num-msg-refine 68
+0 00105.36 Performance counter num-msg-refresh 0
+0 00105.36 Performance counter num-data-msg 0
+0 00105.36 Performance counter num-field-face 1344
+0 00105.36 Performance counter num-particle-data 1417
+0 00105.36 Performance simulation num-particles total 8744
+0 00105.36 performance simulation num-blocks-level -2 1
+0 00105.36 performance simulation num-blocks-level -1 8
+0 00105.37 performance simulation num-blocks-level 0 64
+0 00105.37 performance simulation num-blocks-level 1 448
+0 00105.37 performance simulation num-blocks-level 2 448
+0 00105.37 performance simulation num-blocks-level 3 448
+0 00105.37 Performance simulation num-leaf-blocks 1240
+0 00105.37 Performance simulation num-total-blocks 1417
+0 00105.37 Performance simulation time-usec 2508989226
+0 00105.37 Performance cycle time-usec 2473330093
+0 00105.37 Performance cycle bytes-curr 1290957294
+0 00105.37 Performance cycle bytes-high 1541328197
+0 00105.37 Performance cycle bytes-highest 1541384649
+0 00105.37 Performance cycle bytes-available 0
+0 00105.37 Performance initial time-usec -198687
+0 00105.37 Performance adapt_apply time-usec 18769586
+0 00105.37 Performance adapt_apply_sync time-usec 1709211
+0 00105.37 Performance adapt_update time-usec 2778505
+0 00105.37 Performance adapt_update_sync time-usec 44413943
+0 00105.37 Performance adapt_notify time-usec 6137163
+0 00105.37 Performance adapt_notify_sync time-usec 1249915
+0 00105.37 Performance adapt_end time-usec 24926
+0 00105.37 Performance adapt_end_sync time-usec 480196
+0 00105.37 Performance refresh_store time-usec 0
+0 00105.37 Performance refresh_child time-usec 0
+0 00105.37 Performance refresh_exit time-usec 0
+0 00105.37 Performance refresh_store_sync time-usec 0
+0 00105.37 Performance refresh_child_sync time-usec 0
+0 00105.37 Performance refresh_exit_sync time-usec 0
+0 00105.37 Performance control time-usec 4262183
+0 00105.37 Performance compute time-usec 75416299
+0 00105.37 Performance output time-usec 180627109
+0 00105.37 Performance stopping time-usec 22137912
+0 00105.37 Performance block time-usec 1007410
+0 00105.37 Performance exit time-usec 0
+0 00105.37 Performance simulation max-proc-blocks 140
+0 00105.37 Performance simulation max-proc-particles 1093
+0 00105.37 Performance simulation balance-blocks 137.120677
+0 00105.37 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00105.37 Performance simulation balance-particles 200.000000
+0 00105.37 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00105.63 Solver dd_root  iter 0000  err 0 [0 0]
+0 00105.65 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00105.65 Solver root_coarse  iter 0002  err 0.1684862455207957 [0 1]
+0 00105.65 Solver root_coarse  iter 0003  err 0.02374514919219679 [0 1]
+0 00105.65 Solver root_coarse  iter 0004  err 2.324491905934366e-25 [0 1]
+0 00105.67 Solver dd_root  iter 0001  err 1 [0 0]
+0 00105.68 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00105.68 Solver root_coarse  iter 0002  err 0.1337121898421221 [0 14.2767]
+0 00105.68 Solver root_coarse  iter 0003  err 0.02305141812199675 [0 14.2767]
+0 00105.68 Solver root_coarse  iter 0004  err 5.151062884599053e-26 [0 14.2767]
+0 00105.70 Solver dd_root  iter 0002  err 0.05421490549208646 [0 0]
+0 00105.71 Solver dd_domain  iter 0000  err 0.9913872462507736 [0.991387 0.991387]
+0 00107.02 Solver dd_domain  iter 0012  err 0.009817986975138655 [0.00981799 0.991387]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 12 rr = 0.000278295  rho0 = 1.69914  rr/rho0 = 0.00981799
+0 00107.77 Output writing image file ./Collapse_Lmax_3_DD/dark-000032.png
+0 00108.00  -------------------------------------
+0 00108.00 Simulation cycle 0032
+0 00108.00 Simulation time-sim 3.200000000000e+01
+0 00108.00 Simulation dt 1.000000000000e+00
+0 00108.00 Performance counter num-msg-coarsen 0
+0 00108.00 Performance counter num-msg-refine 68
+0 00108.00 Performance counter num-msg-refresh 0
+0 00108.00 Performance counter num-data-msg 0
+0 00108.00 Performance counter num-field-face 1344
+0 00108.00 Performance counter num-particle-data 1417
+0 00108.00 Performance simulation num-particles total 8744
+0 00108.00 performance simulation num-blocks-level -2 1
+0 00108.00 performance simulation num-blocks-level -1 8
+0 00108.00 performance simulation num-blocks-level 0 64
+0 00108.00 performance simulation num-blocks-level 1 448
+0 00108.00 performance simulation num-blocks-level 2 448
+0 00108.00 performance simulation num-blocks-level 3 448
+0 00108.00 Performance simulation num-leaf-blocks 1240
+0 00108.00 Performance simulation num-total-blocks 1417
+0 00108.00 Performance simulation time-usec 2572188740
+0 00108.00 Performance cycle time-usec 2536529591
+0 00108.00 Performance cycle bytes-curr 1291550622
+0 00108.00 Performance cycle bytes-high 1541330081
+0 00108.00 Performance cycle bytes-highest 1541385225
+0 00108.00 Performance cycle bytes-available 0
+0 00108.00 Performance initial time-usec -198687
+0 00108.00 Performance adapt_apply time-usec 19432986
+0 00108.00 Performance adapt_apply_sync time-usec 1792821
+0 00108.00 Performance adapt_update time-usec 2862405
+0 00108.00 Performance adapt_update_sync time-usec 45923549
+0 00108.00 Performance adapt_notify time-usec 6376194
+0 00108.00 Performance adapt_notify_sync time-usec 1296328
+0 00108.00 Performance adapt_end time-usec 25673
+0 00108.00 Performance adapt_end_sync time-usec 494910
+0 00108.00 Performance refresh_store time-usec 0
+0 00108.00 Performance refresh_child time-usec 0
+0 00108.00 Performance refresh_exit time-usec 0
+0 00108.00 Performance refresh_store_sync time-usec 0
+0 00108.00 Performance refresh_child_sync time-usec 0
+0 00108.00 Performance refresh_exit_sync time-usec 0
+0 00108.00 Performance control time-usec 4361972
+0 00108.00 Performance compute time-usec 77840582
+0 00108.00 Performance output time-usec 182752880
+0 00108.00 Performance stopping time-usec 22960167
+0 00108.00 Performance block time-usec 1007410
+0 00108.00 Performance exit time-usec 0
+0 00108.00 Performance simulation max-proc-blocks 140
+0 00108.00 Performance simulation max-proc-particles 1093
+0 00108.00 Performance simulation balance-blocks 137.120677
+0 00108.00 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00108.00 Performance simulation balance-particles 200.000000
+0 00108.00 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00108.30 Solver dd_root  iter 0000  err 0 [0 0]
+0 00108.32 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00108.32 Solver root_coarse  iter 0002  err 0.1684862455207956 [0 1]
+0 00108.32 Solver root_coarse  iter 0003  err 0.02374514919219677 [0 1]
+0 00108.32 Solver root_coarse  iter 0004  err 2.714351423166562e-25 [0 1]
+0 00108.34 Solver dd_root  iter 0001  err 1 [0 0]
+0 00108.35 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00108.35 Solver root_coarse  iter 0002  err 0.133712189842122 [0 14.2767]
+0 00108.35 Solver root_coarse  iter 0003  err 0.02305141812199675 [0 14.2767]
+0 00108.35 Solver root_coarse  iter 0004  err 5.995801527619855e-26 [0 14.2767]
+0 00108.37 Solver dd_root  iter 0002  err 0.07635091656088008 [0 0]
+0 00108.39 Solver dd_domain  iter 0000  err 0.9933110323794174 [0.993311 0.993311]
+0 00109.56 Solver dd_domain  iter 0013  err 0.008643758909759375 [0.00864376 0.993311]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 13 rr = 0.000281754  rho0 = 1.94192  rr/rho0 = 0.00864376
+0 00110.33 Output writing image file ./Collapse_Lmax_3_DD/dark-000033.png
+0 00110.55  -------------------------------------
+0 00110.55 Simulation cycle 0033
+0 00110.55 Simulation time-sim 3.299772021019e+01
+0 00110.55 Simulation dt 9.977202101906e-01
+0 00110.55 Performance counter num-msg-coarsen 0
+0 00110.55 Performance counter num-msg-refine 68
+0 00110.55 Performance counter num-msg-refresh 0
+0 00110.55 Performance counter num-data-msg 0
+0 00110.55 Performance counter num-field-face 1344
+0 00110.55 Performance counter num-particle-data 1417
+0 00110.55 Performance simulation num-particles total 8744
+0 00110.55 performance simulation num-blocks-level -2 1
+0 00110.55 performance simulation num-blocks-level -1 8
+0 00110.55 performance simulation num-blocks-level 0 64
+0 00110.55 performance simulation num-blocks-level 1 448
+0 00110.55 performance simulation num-blocks-level 2 448
+0 00110.55 performance simulation num-blocks-level 3 448
+0 00110.55 Performance simulation num-leaf-blocks 1240
+0 00110.55 Performance simulation num-total-blocks 1417
+0 00110.55 Performance simulation time-usec 2633511322
+0 00110.55 Performance cycle time-usec 2597852165
+0 00110.55 Performance cycle bytes-curr 1291554118
+0 00110.55 Performance cycle bytes-high 1541923263
+0 00110.55 Performance cycle bytes-highest 1541923263
+0 00110.55 Performance cycle bytes-available 0
+0 00110.55 Performance initial time-usec -198687
+0 00110.55 Performance adapt_apply time-usec 20171315
+0 00110.55 Performance adapt_apply_sync time-usec 1845431
+0 00110.55 Performance adapt_update time-usec 2945916
+0 00110.55 Performance adapt_update_sync time-usec 47425609
+0 00110.55 Performance adapt_notify time-usec 6604822
+0 00110.55 Performance adapt_notify_sync time-usec 1344024
+0 00110.55 Performance adapt_end time-usec 26354
+0 00110.55 Performance adapt_end_sync time-usec 509861
+0 00110.55 Performance refresh_store time-usec 0
+0 00110.55 Performance refresh_child time-usec 0
+0 00110.55 Performance refresh_exit time-usec 0
+0 00110.55 Performance refresh_store_sync time-usec 0
+0 00110.55 Performance refresh_child_sync time-usec 0
+0 00110.55 Performance refresh_exit_sync time-usec 0
+0 00110.55 Performance control time-usec 4466241
+0 00110.55 Performance compute time-usec 80265194
+0 00110.55 Performance output time-usec 184773336
+0 00110.55 Performance stopping time-usec 23725319
+0 00110.55 Performance block time-usec 1007410
+0 00110.56 Performance exit time-usec 0
+0 00110.56 Performance simulation max-proc-blocks 140
+0 00110.56 Performance simulation max-proc-particles 1093
+0 00110.56 Performance simulation balance-blocks 137.120677
+0 00110.56 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00110.56 Performance simulation balance-particles 200.000000
+0 00110.56 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00110.88 Solver dd_root  iter 0000  err 0 [0 0]
+0 00110.90 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00110.90 Solver root_coarse  iter 0002  err 0.1684862455207957 [0 1]
+0 00110.90 Solver root_coarse  iter 0003  err 0.02374514919219679 [0 1]
+0 00110.90 Solver root_coarse  iter 0004  err 7.169951583495074e-25 [0 1]
+0 00110.92 Solver dd_root  iter 0001  err 1 [0 0]
+0 00110.94 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00110.94 Solver root_coarse  iter 0002  err 0.133712189842122 [0 14.2767]
+0 00110.94 Solver root_coarse  iter 0003  err 0.02305141812199675 [0 14.2767]
+0 00110.94 Solver root_coarse  iter 0004  err 1.606965929343798e-25 [0 14.2767]
+0 00110.95 Solver dd_root  iter 0002  err 0.06324125005043418 [0 0]
+0 00110.97 Solver dd_domain  iter 0000  err 0.9879272536264279 [0.987927 0.987927]
+0 00112.54 Solver dd_domain  iter 0014  err 0.008150681305994717 [0.00815068 0.987927]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 14 rr = 0.000140835  rho0 = 1.456  rr/rho0 = 0.00815068
+0 00113.12 Output writing image file ./Collapse_Lmax_3_DD/dark-000034.png
+0 00113.32  -------------------------------------
+0 00113.32 Simulation cycle 0034
+0 00113.32 Simulation time-sim 3.391302095503e+01
+0 00113.32 Simulation dt 9.153007448376e-01
+0 00113.32 Performance counter num-msg-coarsen 0
+0 00113.32 Performance counter num-msg-refine 68
+0 00113.32 Performance counter num-msg-refresh 0
+0 00113.32 Performance counter num-data-msg 0
+0 00113.32 Performance counter num-field-face 1344
+0 00113.32 Performance counter num-particle-data 1417
+0 00113.32 Performance simulation num-particles total 8744
+0 00113.32 performance simulation num-blocks-level -2 1
+0 00113.32 performance simulation num-blocks-level -1 8
+0 00113.32 performance simulation num-blocks-level 0 64
+0 00113.32 performance simulation num-blocks-level 1 448
+0 00113.32 performance simulation num-blocks-level 2 448
+0 00113.32 performance simulation num-blocks-level 3 448
+0 00113.32 Performance simulation num-leaf-blocks 1240
+0 00113.32 Performance simulation num-total-blocks 1417
+0 00113.32 Performance simulation time-usec 2700000502
+0 00113.32 Performance cycle time-usec 2664341338
+0 00113.32 Performance cycle bytes-curr 1291656750
+0 00113.32 Performance cycle bytes-high 1542038771
+0 00113.32 Performance cycle bytes-highest 1542040915
+0 00113.32 Performance cycle bytes-available 0
+0 00113.32 Performance initial time-usec -198687
+0 00113.32 Performance adapt_apply time-usec 20886447
+0 00113.32 Performance adapt_apply_sync time-usec 1921795
+0 00113.32 Performance adapt_update time-usec 3029204
+0 00113.32 Performance adapt_update_sync time-usec 48953791
+0 00113.32 Performance adapt_notify time-usec 6872579
+0 00113.32 Performance adapt_notify_sync time-usec 1378202
+0 00113.32 Performance adapt_end time-usec 27108
+0 00113.32 Performance adapt_end_sync time-usec 524123
+0 00113.32 Performance refresh_store time-usec 0
+0 00113.32 Performance refresh_child time-usec 0
+0 00113.33 Performance refresh_exit time-usec 0
+0 00113.33 Performance refresh_store_sync time-usec 0
+0 00113.33 Performance refresh_child_sync time-usec 0
+0 00113.33 Performance refresh_exit_sync time-usec 0
+0 00113.33 Performance control time-usec 4578514
+0 00113.33 Performance compute time-usec 82904866
+0 00113.33 Performance output time-usec 186666883
+0 00113.33 Performance stopping time-usec 24624240
+0 00113.33 Performance block time-usec 1007410
+0 00113.33 Performance exit time-usec 0
+0 00113.33 Performance simulation max-proc-blocks 140
+0 00113.33 Performance simulation max-proc-particles 1093
+0 00113.33 Performance simulation balance-blocks 137.120677
+0 00113.33 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00113.33 Performance simulation balance-particles 200.000000
+0 00113.33 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00113.62 Solver dd_root  iter 0000  err 0 [0 0]
+0 00113.64 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00113.64 Solver root_coarse  iter 0002  err 0.1684862455207957 [0 1]
+0 00113.64 Solver root_coarse  iter 0003  err 0.02374514919219681 [0 1]
+0 00113.64 Solver root_coarse  iter 0004  err 1.498405424646014e-24 [0 1]
+0 00113.66 Solver dd_root  iter 0001  err 1 [0 0]
+0 00113.67 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00113.67 Solver root_coarse  iter 0002  err 0.1337121898421219 [0 14.2767]
+0 00113.67 Solver root_coarse  iter 0003  err 0.02305141812199669 [0 14.2767]
+0 00113.67 Solver root_coarse  iter 0004  err 3.44046255063121e-25 [0 14.2767]
+0 00113.69 Solver dd_root  iter 0002  err 0.06646680323486077 [0 0]
+0 00113.71 Solver dd_domain  iter 0000  err 0.9906105772494179 [0.990611 0.990611]
+0 00114.92 Solver dd_domain  iter 0013  err 0.00845820437272285 [0.0084582 0.990611]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 13 rr = 0.000196479  rho0 = 1.65722  rr/rho0 = 0.0084582
+0 00115.74 Output writing image file ./Collapse_Lmax_3_DD/dark-000035.png
+0 00115.96 Output writing image file ./Collapse_Lmax_3_DD/po-000035.png
+0 00116.17 Output writing image file ./Collapse_Lmax_3_DD/ax-000035.png
+0 00116.42 Output writing image file ./Collapse_Lmax_3_DD/mesh-000035.png
+0 00116.65  -------------------------------------
+0 00116.65 Simulation cycle 0035
+0 00116.65 Simulation time-sim 3.479001644377e+01
+0 00116.65 Simulation dt 8.769954887441e-01
+0 00116.65 Performance counter num-msg-coarsen 0
+0 00116.65 Performance counter num-msg-refine 68
+0 00116.65 Performance counter num-msg-refresh 0
+0 00116.65 Performance counter num-data-msg 0
+0 00116.65 Performance counter num-field-face 1344
+0 00116.65 Performance counter num-particle-data 1417
+0 00116.65 Performance simulation num-particles total 8744
+0 00116.65 performance simulation num-blocks-level -2 1
+0 00116.65 performance simulation num-blocks-level -1 8
+0 00116.65 performance simulation num-blocks-level 0 64
+0 00116.65 performance simulation num-blocks-level 1 448
+0 00116.65 performance simulation num-blocks-level 2 448
+0 00116.65 performance simulation num-blocks-level 3 448
+0 00116.65 Performance simulation num-leaf-blocks 1240
+0 00116.65 Performance simulation num-total-blocks 1417
+0 00116.65 Performance simulation time-usec 2779809040
+0 00116.65 Performance cycle time-usec 2744149867
+0 00116.65 Performance cycle bytes-curr 1291662950
+0 00116.65 Performance cycle bytes-high 1542051379
+0 00116.65 Performance cycle bytes-highest 1542063021
+0 00116.65 Performance cycle bytes-available 0
+0 00116.65 Performance initial time-usec -198687
+0 00116.65 Performance adapt_apply time-usec 21706404
+0 00116.65 Performance adapt_apply_sync time-usec 1997426
+0 00116.65 Performance adapt_update time-usec 3113192
+0 00116.65 Performance adapt_update_sync time-usec 50510105
+0 00116.65 Performance adapt_notify time-usec 7137279
+0 00116.65 Performance adapt_notify_sync time-usec 1423865
+0 00116.65 Performance adapt_end time-usec 27814
+0 00116.65 Performance adapt_end_sync time-usec 539007
+0 00116.65 Performance refresh_store time-usec 0
+0 00116.65 Performance refresh_child time-usec 0
+0 00116.65 Performance refresh_exit time-usec 0
+0 00116.65 Performance refresh_store_sync time-usec 0
+0 00116.65 Performance refresh_child_sync time-usec 0
+0 00116.65 Performance refresh_exit_sync time-usec 0
+0 00116.65 Performance control time-usec 4683007
+0 00116.65 Performance compute time-usec 85356634
+0 00116.65 Performance output time-usec 194257975
+0 00116.65 Performance stopping time-usec 25422049
+0 00116.65 Performance block time-usec 1007410
+0 00116.65 Performance exit time-usec 0
+0 00116.65 Performance simulation max-proc-blocks 140
+0 00116.65 Performance simulation max-proc-particles 1093
+0 00116.65 Performance simulation balance-blocks 137.120677
+0 00116.65 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00116.65 Performance simulation balance-particles 200.000000
+0 00116.65 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00116.92 Solver dd_root  iter 0000  err 0 [0 0]
+0 00116.94 Solver root_coarse  iter 0001  err 1 [0 1]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00116.94 Solver root_coarse  iter 0002  err 0.1684862455207958 [0 1]
+0 00116.94 Solver root_coarse  iter 0003  err 0.02374514919219682 [0 1]
+0 00116.94 Solver root_coarse  iter 0004  err 1.186425416904827e-24 [0 1]
+0 00116.96 Solver dd_root  iter 0001  err 1 [0 0]
+0 00116.98 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00116.98 Solver root_coarse  iter 0002  err 0.1337121898421221 [0 14.2767]
+0 00116.98 Solver root_coarse  iter 0003  err 0.02305141812199673 [0 14.2767]
+0 00116.98 Solver root_coarse  iter 0004  err 2.776929466129024e-25 [0 14.2767]
+0 00116.99 Solver dd_root  iter 0002  err 0.05142152579102228 [0 0]
+0 00117.01 Solver dd_domain  iter 0000  err 0.9938841460565836 [0.993884 0.993884]
+0 00118.60 Solver dd_domain  iter 0013  err 0.007660912969292903 [0.00766091 0.993884]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 13 rr = 0.00024814  rho0 = 2.05621  rr/rho0 = 0.00766091
+0 00119.17 Output writing image file ./Collapse_Lmax_3_DD/dark-000036.png
+0 00119.39 Output writing data file ./Collapse_Lmax_3_DD/data-07-00.h5
+0 00119.91  -------------------------------------
+0 00119.91 Simulation cycle 0036
+0 00119.91 Simulation time-sim 3.500000000000e+01
+0 00119.91 Simulation dt 2.099835562276e-01
+0 00119.92 Performance counter num-msg-coarsen 0
+0 00119.92 Performance counter num-msg-refine 68
+0 00119.92 Performance counter num-msg-refresh 0
+0 00119.92 Performance counter num-data-msg 0
+0 00119.92 Performance counter num-field-face 1344
+0 00119.92 Performance counter num-particle-data 1417
+0 00119.92 Performance simulation num-particles total 8744
+0 00119.92 performance simulation num-blocks-level -2 1
+0 00119.92 performance simulation num-blocks-level -1 8
+0 00119.92 performance simulation num-blocks-level 0 64
+0 00119.92 performance simulation num-blocks-level 1 448
+0 00119.92 performance simulation num-blocks-level 2 448
+0 00119.92 performance simulation num-blocks-level 3 448
+0 00119.92 Performance simulation num-leaf-blocks 1240
+0 00119.92 Performance simulation num-total-blocks 1417
+0 00119.92 Performance simulation time-usec 2858048760
+0 00119.92 Performance cycle time-usec 2822389575
+0 00119.92 Performance cycle bytes-curr 1291667670
+0 00119.92 Performance cycle bytes-high 1542045369
+0 00119.92 Performance cycle bytes-highest 1542070579
+0 00119.92 Performance cycle bytes-available 0
+0 00119.92 Performance initial time-usec -198687
+0 00119.92 Performance adapt_apply time-usec 22354954
+0 00119.92 Performance adapt_apply_sync time-usec 2067053
+0 00119.92 Performance adapt_update time-usec 3197129
+0 00119.92 Performance adapt_update_sync time-usec 52017313
+0 00119.92 Performance adapt_notify time-usec 7356060
+0 00119.92 Performance adapt_notify_sync time-usec 1488722
+0 00119.92 Performance adapt_end time-usec 28588
+0 00119.92 Performance adapt_end_sync time-usec 553981
+0 00119.92 Performance refresh_store time-usec 0
+0 00119.92 Performance refresh_child time-usec 0
+0 00119.92 Performance refresh_exit time-usec 0
+0 00119.92 Performance refresh_store_sync time-usec 0
+0 00119.92 Performance refresh_child_sync time-usec 0
+0 00119.92 Performance refresh_exit_sync time-usec 0
+0 00119.92 Performance control time-usec 4789784
+0 00119.92 Performance compute time-usec 87807090
+0 00119.92 Performance output time-usec 209638691
+0 00119.92 Performance stopping time-usec 26246058
+0 00119.92 Performance block time-usec 1007410
+0 00119.92 Performance exit time-usec 0
+0 00119.92 Performance simulation max-proc-blocks 140
+0 00119.92 Performance simulation max-proc-particles 1093
+0 00119.92 Performance simulation balance-blocks 137.120677
+0 00119.92 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00119.92 Performance simulation balance-particles 200.000000
+0 00119.92 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00120.22 Solver dd_root  iter 0000  err 0 [0 0]
+0 00120.23 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00120.23 Solver root_coarse  iter 0002  err 0.1684862455207959 [0 1]
+0 00120.23 Solver root_coarse  iter 0003  err 0.02374514919219685 [0 1]
+0 00120.23 Solver root_coarse  iter 0004  err 6.290525703685431e-19 [0 1]
+0 00120.25 Solver dd_root  iter 0001  err 1 [0 0]
+0 00120.26 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00120.26 Solver root_coarse  iter 0002  err 0.1337121898421219 [0 14.2767]
+0 00120.26 Solver root_coarse  iter 0003  err 0.02305141812199672 [0 14.2767]
+0 00120.26 Solver root_coarse  iter 0004  err 1.730183487221687e-19 [0 14.2767]
+0 00120.28 Solver dd_root  iter 0002  err 0.06315289104101178 [0 0]
+0 00120.30 Solver dd_domain  iter 0000  err 0.9953234505033296 [0.995323 0.995323]
+0 00121.79 Solver dd_domain  iter 0013  err 0.00889022883705015 [0.00889023 0.995323]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 13 rr = 0.000437547  rho0 = 2.35288  rr/rho0 = 0.00889023
+0 00122.47 Output writing image file ./Collapse_Lmax_3_DD/dark-000037.png
+0 00122.66  -------------------------------------
+0 00122.66 Simulation cycle 0037
+0 00122.66 Simulation time-sim 3.569226726676e+01
+0 00122.66 Simulation dt 6.922672667611e-01
+0 00122.66 Performance counter num-msg-coarsen 0
+0 00122.66 Performance counter num-msg-refine 68
+0 00122.66 Performance counter num-msg-refresh 0
+0 00122.66 Performance counter num-data-msg 0
+0 00122.66 Performance counter num-field-face 1344
+0 00122.66 Performance counter num-particle-data 1417
+0 00122.66 Performance simulation num-particles total 8744
+0 00122.66 performance simulation num-blocks-level -2 1
+0 00122.66 performance simulation num-blocks-level -1 8
+0 00122.66 performance simulation num-blocks-level 0 64
+0 00122.66 performance simulation num-blocks-level 1 448
+0 00122.66 performance simulation num-blocks-level 2 448
+0 00122.66 performance simulation num-blocks-level 3 448
+0 00122.66 Performance simulation num-leaf-blocks 1240
+0 00122.66 Performance simulation num-total-blocks 1417
+0 00122.66 Performance simulation time-usec 2924003375
+0 00122.66 Performance cycle time-usec 2888344174
+0 00122.66 Performance cycle bytes-curr 1291673710
+0 00122.66 Performance cycle bytes-high 1542033951
+0 00122.66 Performance cycle bytes-highest 1542074343
+0 00122.66 Performance cycle bytes-available 0
+0 00122.66 Performance initial time-usec -198687
+0 00122.66 Performance adapt_apply time-usec 23113451
+0 00122.66 Performance adapt_apply_sync time-usec 2114744
+0 00122.66 Performance adapt_update time-usec 3280863
+0 00122.66 Performance adapt_update_sync time-usec 53520261
+0 00122.66 Performance adapt_notify time-usec 7675373
+0 00122.66 Performance adapt_notify_sync time-usec 1524103
+0 00122.66 Performance adapt_end time-usec 29299
+0 00122.66 Performance adapt_end_sync time-usec 568160
+0 00122.66 Performance refresh_store time-usec 0
+0 00122.66 Performance refresh_child time-usec 0
+0 00122.66 Performance refresh_exit time-usec 0
+0 00122.66 Performance refresh_store_sync time-usec 0
+0 00122.66 Performance refresh_child_sync time-usec 0
+0 00122.66 Performance refresh_exit_sync time-usec 0
+0 00122.66 Performance control time-usec 4897572
+0 00122.66 Performance compute time-usec 90292458
+0 00122.66 Performance output time-usec 211626881
+0 00122.66 Performance stopping time-usec 27069487
+0 00122.66 Performance block time-usec 1007410
+0 00122.66 Performance exit time-usec 0
+0 00122.66 Performance simulation max-proc-blocks 140
+0 00122.66 Performance simulation max-proc-particles 1093
+0 00122.66 Performance simulation balance-blocks 137.120677
+0 00122.66 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00122.66 Performance simulation balance-particles 200.000000
+0 00122.66 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00122.97 Solver dd_root  iter 0000  err 0 [0 0]
+0 00122.99 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00122.99 Solver root_coarse  iter 0002  err 0.1684862455207959 [0 1]
+0 00122.99 Solver root_coarse  iter 0003  err 0.02374514919219685 [0 1]
+0 00122.99 Solver root_coarse  iter 0004  err 5.44210268739579e-18 [0 1]
+0 00123.01 Solver dd_root  iter 0001  err 1 [0 0]
+0 00123.03 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00123.03 Solver root_coarse  iter 0002  err 0.1337121898421219 [0 14.2767]
+0 00123.03 Solver root_coarse  iter 0003  err 0.0230514181219967 [0 14.2767]
+0 00123.03 Solver root_coarse  iter 0004  err 1.541053376892504e-18 [0 14.2767]
+0 00123.04 Solver dd_root  iter 0002  err 0.05714682163368858 [0 0]
+0 00123.06 Solver dd_domain  iter 0000  err 0.9958655625527462 [0.995866 0.995866]
+0 00124.45 Solver dd_domain  iter 0013  err 0.008881605614210751 [0.00888161 0.995866]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 13 rr = 0.00049446  rho0 = 2.50365  rr/rho0 = 0.00888161
+0 00125.22 Output writing image file ./Collapse_Lmax_3_DD/dark-000038.png
+0 00125.43  -------------------------------------
+0 00125.43 Simulation cycle 0038
+0 00125.43 Simulation time-sim 3.629993333395e+01
+0 00125.43 Simulation dt 6.076660671866e-01
+0 00125.43 Performance counter num-msg-coarsen 0
+0 00125.43 Performance counter num-msg-refine 68
+0 00125.43 Performance counter num-msg-refresh 0
+0 00125.43 Performance counter num-data-msg 0
+0 00125.43 Performance counter num-field-face 1344
+0 00125.43 Performance counter num-particle-data 1417
+0 00125.43 Performance simulation num-particles total 8744
+0 00125.43 performance simulation num-blocks-level -2 1
+0 00125.43 performance simulation num-blocks-level -1 8
+0 00125.43 performance simulation num-blocks-level 0 64
+0 00125.43 performance simulation num-blocks-level 1 448
+0 00125.43 performance simulation num-blocks-level 2 448
+0 00125.43 performance simulation num-blocks-level 3 448
+0 00125.43 Performance simulation num-leaf-blocks 1240
+0 00125.43 Performance simulation num-total-blocks 1417
+0 00125.43 Performance simulation time-usec 2990537464
+0 00125.43 Performance cycle time-usec 2954878256
+0 00125.43 Performance cycle bytes-curr 1291677694
+0 00125.43 Performance cycle bytes-high 1542085371
+0 00125.43 Performance cycle bytes-highest 1542090823
+0 00125.43 Performance cycle bytes-available 0
+0 00125.43 Performance initial time-usec -198687
+0 00125.43 Performance adapt_apply time-usec 23787834
+0 00125.43 Performance adapt_apply_sync time-usec 2168030
+0 00125.43 Performance adapt_update time-usec 3364528
+0 00125.43 Performance adapt_update_sync time-usec 54930120
+0 00125.43 Performance adapt_notify time-usec 7888148
+0 00125.43 Performance adapt_notify_sync time-usec 1556534
+0 00125.43 Performance adapt_end time-usec 30006
+0 00125.43 Performance adapt_end_sync time-usec 583141
+0 00125.43 Performance refresh_store time-usec 0
+0 00125.43 Performance refresh_child time-usec 0
+0 00125.43 Performance refresh_exit time-usec 0
+0 00125.43 Performance refresh_store_sync time-usec 0
+0 00125.43 Performance refresh_child_sync time-usec 0
+0 00125.43 Performance refresh_exit_sync time-usec 0
+0 00125.43 Performance control time-usec 5005421
+0 00125.43 Performance compute time-usec 92836811
+0 00125.43 Performance output time-usec 213724740
+0 00125.43 Performance stopping time-usec 27986628
+0 00125.43 Performance block time-usec 1007410
+0 00125.43 Performance exit time-usec 0
+0 00125.43 Performance simulation max-proc-blocks 140
+0 00125.43 Performance simulation max-proc-particles 1093
+0 00125.43 Performance simulation balance-blocks 137.120677
+0 00125.43 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00125.43 Performance simulation balance-particles 200.000000
+0 00125.43 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00125.70 Solver dd_root  iter 0000  err 0 [0 0]
+0 00125.72 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00125.72 Solver root_coarse  iter 0002  err 0.1684862455207958 [0 1]
+0 00125.72 Solver root_coarse  iter 0003  err 0.02374514919219682 [0 1]
+0 00125.72 Solver root_coarse  iter 0004  err 1.048937320562804e-17 [0 1]
+0 00125.74 Solver dd_root  iter 0001  err 1 [0 0]
+0 00125.75 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00125.75 Solver root_coarse  iter 0002  err 0.1337121898421221 [0 14.2767]
+0 00125.75 Solver root_coarse  iter 0003  err 0.02305141812199674 [0 14.2767]
+0 00125.75 Solver root_coarse  iter 0004  err 3.007519355699483e-18 [0 14.2767]
+0 00125.77 Solver dd_root  iter 0002  err 0.04399336351718694 [0 0]
+0 00125.78 Solver dd_domain  iter 0000  err 0.9950734977133956 [0.995073 0.995073]
+0 00127.07 Solver dd_domain  iter 0014  err 0.009235117244190745 [0.00923512 0.995073]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 14 rr = 0.000448182  rho0 = 2.29237  rr/rho0 = 0.00923512
+0 00127.80 Output writing image file ./Collapse_Lmax_3_DD/dark-000039.png
+0 00128.05  -------------------------------------
+0 00128.05 Simulation cycle 0039
+0 00128.05 Simulation time-sim 3.697110444228e+01
+0 00128.05 Simulation dt 6.711711083294e-01
+0 00128.05 Performance counter num-msg-coarsen 0
+0 00128.05 Performance counter num-msg-refine 68
+0 00128.05 Performance counter num-msg-refresh 0
+0 00128.05 Performance counter num-data-msg 0
+0 00128.05 Performance counter num-field-face 1344
+0 00128.05 Performance counter num-particle-data 1417
+0 00128.05 Performance simulation num-particles total 8744
+0 00128.05 performance simulation num-blocks-level -2 1
+0 00128.05 performance simulation num-blocks-level -1 8
+0 00128.05 performance simulation num-blocks-level 0 64
+0 00128.05 performance simulation num-blocks-level 1 448
+0 00128.05 performance simulation num-blocks-level 2 448
+0 00128.05 performance simulation num-blocks-level 3 448
+0 00128.05 Performance simulation num-leaf-blocks 1240
+0 00128.05 Performance simulation num-total-blocks 1417
+0 00128.05 Performance simulation time-usec 3053428654
+0 00128.05 Performance cycle time-usec 3017769429
+0 00128.05 Performance cycle bytes-curr 1291684158
+0 00128.05 Performance cycle bytes-high 1542083441
+0 00128.05 Performance cycle bytes-highest 1542102931
+0 00128.05 Performance cycle bytes-available 0
+0 00128.05 Performance initial time-usec -198687
+0 00128.05 Performance adapt_apply time-usec 24421831
+0 00128.05 Performance adapt_apply_sync time-usec 2218904
+0 00128.05 Performance adapt_update time-usec 3448329
+0 00128.05 Performance adapt_update_sync time-usec 56269927
+0 00128.05 Performance adapt_notify time-usec 8124440
+0 00128.05 Performance adapt_notify_sync time-usec 1613498
+0 00128.05 Performance adapt_end time-usec 30713
+0 00128.05 Performance adapt_end_sync time-usec 597332
+0 00128.05 Performance refresh_store time-usec 0
+0 00128.05 Performance refresh_child time-usec 0
+0 00128.05 Performance refresh_exit time-usec 0
+0 00128.05 Performance refresh_store_sync time-usec 0
+0 00128.05 Performance refresh_child_sync time-usec 0
+0 00128.05 Performance refresh_exit_sync time-usec 0
+0 00128.05 Performance control time-usec 5115446
+0 00128.05 Performance compute time-usec 95102648
+0 00128.05 Performance output time-usec 215917118
+0 00128.05 Performance stopping time-usec 28739323
+0 00128.05 Performance block time-usec 1007410
+0 00128.05 Performance exit time-usec 0
+0 00128.05 Performance simulation max-proc-blocks 140
+0 00128.05 Performance simulation max-proc-particles 1093
+0 00128.05 Performance simulation balance-blocks 137.120677
+0 00128.05 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00128.05 Performance simulation balance-particles 200.000000
+0 00128.05 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 00128.37 Solver dd_root  iter 0000  err 0 [0 0]
+0 00128.39 Solver root_coarse  iter 0001  err 1 [0 1]
+0 00128.39 Solver root_coarse  iter 0002  err 0.1684862455207959 [0 1]
+0 00128.39 Solver root_coarse  iter 0003  err 0.02374514919219683 [0 1]
+WARNING: build/Enzo/enzo_EnzoSolverCg.cpp:912 CG::xs_ zero
+0 00128.39 Solver root_coarse  iter 0004  err 4.459707732328903e-18 [0 1]
+0 00128.41 Solver dd_root  iter 0001  err 1 [0 0]
+0 00128.42 Solver root_coarse  iter 0001  err 1 [0 14.2767]
+0 00128.42 Solver root_coarse  iter 0002  err 0.133712189842122 [0 14.2767]
+0 00128.42 Solver root_coarse  iter 0003  err 0.02305141812199675 [0 14.2767]
+0 00128.42 Solver root_coarse  iter 0004  err 1.281287085403318e-18 [0 14.2767]
+0 00128.44 Solver dd_root  iter 0002  err 0.05738324965442297 [0 0]
+0 00128.46 Solver dd_domain  iter 0000  err 0.9912395639578335 [0.99124 0.99124]
+0 00130.08 Solver dd_domain  iter 0017  err 0.009194847652490061 [0.00919485 0.99124]
+B00_00_00 DEBUG_SOLVER bicgstab final iter = 17 rr = 0.00024909  rho0 = 1.71646  rr/rho0 = 0.00919485
+0 00130.74 Output writing image file ./Collapse_Lmax_3_DD/dark-000040.png
+0 00130.96 Output writing image file ./Collapse_Lmax_3_DD/po-000040.png
+0 00131.19 Output writing image file ./Collapse_Lmax_3_DD/ax-000040.png
+0 00131.41 Output writing image file ./Collapse_Lmax_3_DD/mesh-000040.png
+0 00131.66  -------------------------------------
+0 00131.66 Simulation cycle 0040
+0 00131.66 Simulation time-sim 3.769808936538e+01
+0 00131.66 Simulation dt 7.269849231051e-01
+0 00131.66 Performance counter num-msg-coarsen 0
+0 00131.66 Performance counter num-msg-refine 68
+0 00131.66 Performance counter num-msg-refresh 0
+0 00131.66 Performance counter num-data-msg 0
+0 00131.66 Performance counter num-field-face 1344
+0 00131.66 Performance counter num-particle-data 1417
+0 00131.66 Performance simulation num-particles total 8744
+0 00131.66 performance simulation num-blocks-level -2 1
+0 00131.66 performance simulation num-blocks-level -1 8
+0 00131.66 performance simulation num-blocks-level 0 64
+0 00131.66 performance simulation num-blocks-level 1 448
+0 00131.66 performance simulation num-blocks-level 2 448
+0 00131.66 performance simulation num-blocks-level 3 448
+0 00131.66 Performance simulation num-leaf-blocks 1240
+0 00131.66 Performance simulation num-total-blocks 1417
+0 00131.66 Performance simulation time-usec 3140160999
+0 00131.66 Performance cycle time-usec 3104501762
+0 00131.66 Performance cycle bytes-curr 1292276998
+0 00131.66 Performance cycle bytes-high 1542062023
+0 00131.66 Performance cycle bytes-highest 1542111395
+0 00131.66 Performance cycle bytes-available 0
+0 00131.66 Performance initial time-usec -198687
+0 00131.66 Performance adapt_apply time-usec 25035922
+0 00131.67 Performance adapt_apply_sync time-usec 2278336
+0 00131.67 Performance adapt_update time-usec 3532116
+0 00131.67 Performance adapt_update_sync time-usec 57752506
+0 00131.67 Performance adapt_notify time-usec 8383209
+0 00131.67 Performance adapt_notify_sync time-usec 1655349
+0 00131.67 Performance adapt_end time-usec 31438
+0 00131.67 Performance adapt_end_sync time-usec 611811
+0 00131.67 Performance refresh_store time-usec 0
+0 00131.67 Performance refresh_child time-usec 0
+0 00131.67 Performance refresh_exit time-usec 0
+0 00131.67 Performance refresh_store_sync time-usec 0
+0 00131.67 Performance refresh_child_sync time-usec 0
+0 00131.67 Performance refresh_exit_sync time-usec 0
+0 00131.67 Performance control time-usec 5239471
+0 00131.67 Performance compute time-usec 97589912
+0 00131.67 Performance output time-usec 224254444
+0 00131.67 Performance stopping time-usec 29544820
+0 00131.67 Performance block time-usec 1007410
+0 00131.67 Performance exit time-usec 0
+0 00131.67 Performance simulation max-proc-blocks 140
+0 00131.67 Performance simulation max-proc-particles 1093
+0 00131.67 Performance simulation balance-blocks 137.120677
+0 00131.67 Performance simulation balance-eff-blocks 0.421726 (59/140)
+0 00131.67 Performance simulation balance-particles 200.000000
+0 00131.67 Performance simulation balance-eff-particles 0.333333 (364/1093)
+0 Block::exit_() MsgRefine::counter = 68 != 0
+0 Block::exit_() FieldFace::counter = 8 != 0
+UNIT TEST END 130.849670
+0 00131.67 Testing actual   time:  37.6980893653823
+0 00131.67 Testing tolerance:      1e-06
+0 00131.67  END ENZO-P
+0 00131.67  END CELLO
+[Partition 0][Node 0] End of program
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: *** STEP 31403400.0 ON comet-17-28 CANCELLED AT 2020-02-07T12:22:31 ***
+srun: error: comet-17-28: tasks 0-23: Terminated

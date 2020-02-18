@@ -1,18 +1,24 @@
+# Joshua Smith
+# 18/02/2020
+# Takes the standard text output of a Enzo-E Domain decomposed (DD) gravity simulation and converts it to a .csv
+# spreadsheet containing: cycle start and finish times, solver iteration count, simulation time, and the number of
+# blocks at each refinement level.
+
 import re
 import sys
 import csv
 
-########### read in from console input #############################################
+### read in from console input ###############################################
 
-fileName = sys.argv[1]   if len(sys.argv) > 1 else "original_output"
-outputFile = sys.argv[2] if len(sys.argv) > 2 else "test_output_BCG.csv"
+fileName = sys.argv[1]   if len(sys.argv) > 1 else "test_output_DD.txt"
+outputFile = sys.argv[2] if len(sys.argv) > 2 else "test_output_DD.csv"
 
 lineList = []
 with open(fileName, "r") as sourceFile:
     for line in sourceFile:
         lineList.append(line)
 
-######################## Get iteration count and cycle end time (excluding print) ##################
+### Get iteration count and cycle end time (excluding print time) ############
 
 # lines that start with B0 directly follow the end of a iteration cycle.
 index_of_B0 = []
@@ -29,7 +35,7 @@ for i in last_iter_index:
     iteration_number.append(int(words[5]))
     end_cycle_times.append(float(words[1]))
 
-###################### Get cycle start time + sim time + cycle number ########################################
+### Get cycle start time + sim time + cycle number ###########################
 
 start_cycle_index = []
 for i in range(len(lineList)):
@@ -46,11 +52,12 @@ for i in start_cycle_index:
     cycle_number.append(int(cycle_line[4]))
     sim_times.append(float(lineList[i+1].split()[4]))
 
-################## Get number of blocks at each level + max level #############################
+### Get number of blocks at each level + max level ###########################
 max_level = 0
 for i in range(len(lineList)):
     if re.search(".max_level", lineList[i]):
         max_level = int(lineList[i].split()[5])
+        break
 
 block_index = []
 for i in range(len(lineList)):
@@ -72,7 +79,7 @@ for i in range(len(block_index)):
 
 
 
-################## Calculate time in python (for error checking ####################
+### Calculate time in python (for error checking) #############################
 
 print_time = []
 for i in range(1, len(start_cycle_times)):
@@ -85,7 +92,7 @@ for i in range(min(len(start_cycle_times), len(end_cycle_times))):
 
 
 
-############# Export to csv file ##############################################
+### Export to csv file ###########################################################
 #pad out lists that are one short by definition
 iteration_number.append(None)
 end_cycle_times.append(None)
