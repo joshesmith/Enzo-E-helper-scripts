@@ -9,6 +9,8 @@ import sys
 import os
 import math
 
+from numpy import sort
+
 from compare_errors_two_files import compare_data_files
 
 if __name__ == "__main__":
@@ -30,8 +32,10 @@ if __name__ == "__main__":
     for entry in os.scandir(approx_directory):
         approx_files.append(entry.path)
 
-    big_numer_sum =0
-    big_denom_sum =0
+    good_files   = sort(good_files)
+    approx_files = sort(approx_files)
+    big_numer_sum = 0
+    big_denom_sum = 0
     for i in range(len(good_files)):
         print("{} and {}".format(good_files[i],approx_files[i]))
         [numer_sum, denom_sum] = compare_data_files(good_files[i], approx_files[i], field_name,max_blocks)
